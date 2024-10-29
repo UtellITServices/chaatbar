@@ -1,0 +1,32 @@
+import React from "react";
+import styles from "./homeSections.module.scss";
+import { Container } from "react-bootstrap";
+import { ImageBottomWave, ImageTopWave } from "@/assets/svg";
+
+const FranchiseSection = () => {
+  return (
+    <section
+      className={styles.franchise_section}
+      style={{ backgroundImage: "url('/images/home/franchise_bg.jpg')" }}
+    >
+      <span className={`${styles.wave} ${styles.wave_top}`}>
+        <ImageTopWave />
+      </span>
+      <span className={`${styles.wave} ${styles.wave_bottom}`}>
+        <ImageBottomWave />
+      </span>
+      <Container>
+        <div className={styles.content}>
+          <h3>Join our Franchise to Grow Business</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            doloribus recusandae.
+          </p>
+          <button className="btn btn-primary">Join Now</button>
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+export default FranchiseSection;

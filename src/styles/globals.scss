@@ -1,0 +1,88 @@
+@import "/src/styles/var";
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: $font_two;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font_two;
+  font-weight: bold;
+}
+
+.field_wrap {
+  position: relative;
+
+  label {
+    font-weight: 400;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+
+  input,
+  textarea {
+    &.form-control {
+      box-shadow: none;
+      min-height: 38px;
+      line-height: 1.25;
+      color: #000;
+      resize: none;
+      border: 1px solid #253d4e1a;
+      border-radius: 12px;
+      padding: 12px;
+
+      &:focus {
+        box-shadow: 0px 0px 0px 1px #9e77ed3d;
+      }
+
+      &::placeholder {
+        color: rgba(#000, 0.5);
+      }
+
+      &.has_error {
+        border-color: #f00;
+
+        &:focus {
+          border-color: rgba(#f00, 0.5);
+          box-shadow: 0px 0px 0px 4px rgba(#f00, 0.3),
+            0px 1px 2px 0px rgba(#f00, 0.3);
+        }
+      }
+    }
+  }
+
+  textarea {
+    &.form-control {
+      padding: 14px 12px;
+    }
+  }
+
+  select {
+    &.form-select {
+      box-shadow: none;
+      border: 1px solid #253d4e1a;
+      border-radius: 12px;
+      color: #000;
+      min-height: 38px;
+      padding: 12px;
+    }
+  }
+}
+
+.field_error {
+  position: absolute;
+  color: #f00;
+  right: 0;
+  font-size: 12px;
+  top: 100%;
+}

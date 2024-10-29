@@ -1,0 +1,145 @@
+@import "/src/styles/var";
+
+.contactDetail {
+  padding: 100px 0;
+  background-color: #f1ead3;
+
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 23px;
+    height: 100%;
+
+    h3 {
+      color: #253d4e;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    a {
+      color: #adadad;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .icon {
+      font-size: 50px;
+      color: $primary;
+    }
+    @media (max-width: $lg) {
+      align-items: initial;
+      padding: 16px;
+      .icon {
+        margin-top: 5px;
+        font-size: 30px;
+        line-height: 1;
+      }
+      h3 {
+        margin-bottom: 4px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .headContent {
+    max-width: 660px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: var(--heading2);
+    color: #253d4e;
+    // font-weight: 600;
+
+    span {
+      font-weight: 600;
+    }
+  }
+  @media (max-width: $lg) {
+    padding: 40px 0;
+  }
+}
+
+.footer {
+  background-color: #f1ead3;
+
+  .footerWrapper .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #0f528b2e;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    .footerLogo {
+      img {
+        cursor: pointer;
+      }
+    }
+    @media (max-width: $lg) {
+      padding: 20px 20px;
+      .footerLogo {
+        img {
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background: $primary;
+    text-align: center;
+    padding: 20px 0;
+
+    p {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      margin: 0;
+      font-weight: 400;
+      font-size: var(--f18);
+      color: #fff;
+    }
+
+    a {
+      display: flex;
+      gap: 5px;
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    img {
+      width: 20px;
+      object-fit: contain;
+    }
+  }
+
+  .socialLinks ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .socialLinks ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #0a142f;
+    color: #0a142f;
+    border-radius: 40px;
+    text-decoration: none;
+  }
+}

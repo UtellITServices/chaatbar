@@ -1,0 +1,22 @@
+@import "/src/styles/var";
+
+.layout {
+  --f18: 18px;
+  --f20: 20px;
+  --f22: 22px;
+  --f28: 28px;
+  --f30: 30px;
+  --f38: 38px;
+  --heading1: 56px;
+  --heading2: 44px;
+  @media (max-width: $lg) {
+    --heading1: 34px;
+    --heading2: 26px;
+    --f18: 16px;
+    --f20: 18px;
+    --f22: 18px;
+    --f28: 22px;
+    --f30: 24px;
+    --f38: 26px;
+  }
+}
