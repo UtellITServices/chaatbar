@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import Preloader from "@/components/loader";
+import { Toaster } from "sonner";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
@@ -19,6 +20,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       {loading && <Preloader />}
       <Component {...pageProps} />
+      <Toaster
+        position="top-center"
+        duration={3000}
+        visibleToasts={3}
+        richColors
+      />
     </>
   );
 }

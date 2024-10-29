@@ -14,7 +14,7 @@ export const contactYupSchema = yup.object().shape({
     .required("Phone number is required")
     .matches(phoneRegExp, "Must be valid phone number")
     .min(8, "Minimum 8 numbers")
-    .max(12, "Maximum 10 numbers"),
+    .max(12, "Maximum 12 numbers"),
   email: yup
     .string()
     .trim()
@@ -27,34 +27,4 @@ export const contactYupSchema = yup.object().shape({
     .required("Message is required")
     .min(10, "Minimum 10 chracter")
     .max(500, "Maximum 500 chracter"),
-});
-export const meetingYupSchema = yup.object().shape({
-  date: yup
-    .string()
-    .trim()
-    .max(24, "Maximum 24 character")
-    .required("This field is required"),
-  time: yup
-    .string()
-    .trim()
-    .max(24, "Maximum 24 character")
-    .required("This field is required"),
-  name: yup
-    .string()
-    .trim()
-    .max(24, "Maximum 24 character")
-    .required("This field is required"),
-  phone_number: yup
-    .string()
-    .trim()
-    .required("Phone number is required")
-    .matches(phoneRegExp, "Must be valid phone number")
-    .min(10, "Enter 10 numbers")
-    .max(10, "Enter 10 numbers"),
-  email: yup
-    .string()
-    .trim()
-    .required("Email is required")
-    .email("Must be valid email syntax")
-    .matches(emailRegExp, "Must be valid email syntax"),
 });

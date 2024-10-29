@@ -6,17 +6,78 @@ import { useFormik } from "formik";
 import Head from "next/head";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./franchises.module.scss";
+import { contactYupSchema } from "@/validationSchema/contact";
+import { toast } from "sonner";
+import { useState } from "react";
 
 const Franchise = () => {
+  const [loading, setLoading] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
-      phone: "",
+      phone_number: "",
       message: "",
     },
-    onSubmit: () => {},
+    validationSchema: contactYupSchema,
+    onSubmit: (values) => {
+      handleSubmit(values);
+      sendEmail(values);
+    },
   });
+
+  const sendEmail = async (values) => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/franchise", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) {
+        toast.error("Something went wrong");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(
+        "There was an error sending your message. Please try again later."
+      );
+    }
+    setLoading(false);
+  };
+
+  const handleSubmit = async (values) => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact-us", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...values,
+          is_franchise: true,
+        }),
+      });
+      if (res.ok) {
+        formik.resetForm();
+        toast.success("Form submitted successfully");
+      } else {
+        toast.error("Something went wrong");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(
+        "There was an error sending your message. Please try again later."
+      );
+    }
+    setLoading(false);
+  };
 
   return (
     <PageLayout>
@@ -106,38 +167,45 @@ const Franchise = () => {
                 <Col lg={5}>
                   <div className={styles.form_box}>
                     <h3>Get started with us</h3>
-                    <div className={styles.form_fields}>
-                      <InputField
-                        label="Name"
-                        name="name"
-                        formik={formik}
-                        placeholder="Enter name"
-                      />
-                      <InputField
-                        label="Email"
-                        name="email"
-                        formik={formik}
-                        placeholder="Enter email"
-                      />
-                      <InputField
-                        label="Phone"
-                        name="phone"
-                        formik={formik}
-                        placeholder="Enter phone number"
-                      />
-                      <InputField
-                        as="textarea"
-                        multiple
-                        rows={5}
-                        label="Message"
-                        name="message"
-                        formik={formik}
-                        placeholder="Enter messages"
-                      />
-                      <div className={styles.submit}>
-                        <button className="btn btn-primary">SUBMIT</button>
+                    <form onSubmit={formik.handleSubmit}>
+                      <div className={styles.form_fields}>
+                        <InputField
+                          label="Name"
+                          name="name"
+                          formik={formik}
+                          placeholder="Enter name"
+                        />
+                        <InputField
+                          label="Email"
+                          name="email"
+                          formik={formik}
+                          placeholder="Enter email"
+                        />
+                        <InputField
+                          label="Phone"
+                          name="phone_number"
+                          formik={formik}
+                          placeholder="Enter phone number"
+                        />
+                        <InputField
+                          as="textarea"
+                          multiple
+                          rows={5}
+                          label="Message"
+                          name="message"
+                          formik={formik}
+                          placeholder="Enter messages"
+                        />
+                        <div className={styles.submit}>
+                          <button
+                            className="btn btn-primary"
+                            disabled={loading}
+                          >
+                            {loading ? "Sending..." : "SUBMIT"}
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </Col>
               </Row>

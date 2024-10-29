@@ -110,7 +110,7 @@ export default function Home() {
             >
               <SwiperSlide>
                 <video autoPlay loop muted>
-                  <source src="/video/banner_video2.mp4" type="video/mp4" />
+                  <source src="/video/banner_video1.mp4" type="video/mp4" />
                 </video>
               </SwiperSlide>
               <SwiperSlide>
@@ -134,7 +134,7 @@ export default function Home() {
                 </h4>
               </div>
               <div className={styles.image}>
-                <img src="/images/banner/banner2.png" alt="banner" />
+                <img src="/images/banner/banner1.png" alt="banner" />
               </div>
             </div>
             <div className={styles.arrows}>

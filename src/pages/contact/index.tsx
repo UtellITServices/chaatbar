@@ -41,7 +41,7 @@ export default function Contact() {
       });
       if (res.ok) {
         formik.resetForm();
-        toast.success("Form submited successfully");
+        toast.success("Form submitted successfully");
       } else {
         toast.error("Something went wrong");
       }
@@ -153,8 +153,12 @@ export default function Contact() {
                       />
                     </Col>
                     <div className={styles.submit}>
-                      <button className={styles.main_btn} type="submit">
-                        Contact Us
+                      <button
+                        className={styles.main_btn}
+                        type="submit"
+                        disabled={loading}
+                      >
+                        {loading ? "sending..." : "Contact Us"}
                       </button>
                     </div>
                   </Row>

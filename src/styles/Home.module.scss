@@ -53,22 +53,21 @@ $anim-timing: 3s;
 
   .banner_inner {
     --spacing: 1rem;
+    --width: 50%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 0 calc(-1 * var(--spacing));
     gap: var(--spacing) 0;
     & > * {
       padding: 0 var(--spacing);
-      flex-basis: 50%;
-      max-width: 50%;
+      flex-basis: var(--width);
+      max-width: var(--width);
     }
 
     @media (max-width: $lg) {
       flex-wrap: wrap;
-      & > * {
-        flex-basis: 100%;
-        max-width: 100%;
-      }
+      --width: 100%;
     }
   }
 
@@ -110,11 +109,14 @@ $anim-timing: 3s;
   }
 
   .image {
+    text-align: center;
     img {
       animation: moving 6s infinite linear;
-      max-width: 100%;
+      max-width: 84%;
     }
+    margin-top: -130px;
     @media (max-width: $lg) {
+      margin-top: -60px;
       text-align: center;
       img {
         max-width: 85%;
