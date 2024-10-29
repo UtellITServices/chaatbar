@@ -12,10 +12,6 @@ export default async function handler(req, res) {
       text: body?.message || body?.name || "",
       html: emailTemplateContactUs(body),
     };
-    console.log(
-      "process.env.SEND_GRID_API_EMAIL===>",
-      process.env.SEND_GRID_API_EMAIL
-    );
 
     try {
       // Send email

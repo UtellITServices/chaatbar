@@ -33,8 +33,6 @@ export async function getServerSideProps() {
 
 export default function Menus({ ...props }) {
   const { menuData } = props;
-  console.log("menuData", menuData);
-
   const menuList = menuData?.data ?? [];
   return (
     <PageLayout>
