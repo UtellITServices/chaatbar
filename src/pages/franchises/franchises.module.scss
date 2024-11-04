@@ -19,7 +19,7 @@
   color: #fff;
   &::before {
     content: "";
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     inset: 0;
     width: 100%;
@@ -39,10 +39,14 @@
       font-size: 60px;
       line-height: 1.2;
       text-transform: uppercase;
+      span {
+        color: $primary;
+        font-weight: 800;
+      }
       @media (max-width: $lg) {
         font-size: 28px;
-        span {
-          font-size: 50px;
+        br {
+          display: none;
         }
       }
       @media (max-width: $sm) {
@@ -52,11 +56,15 @@
 
     p {
       max-width: 700px;
-      margin: auto;
-      font-size: 18px;
+      margin: 10px auto 0;
+      font-size: var(--f18);
       opacity: 0.9;
       font-family: $font_two;
-      font-weight: 300;
+      font-weight: 400;
+    }
+    @include max($md) {
+      margin: auto;
+      max-width: 90%;
     }
   }
 }
@@ -74,6 +82,7 @@
     gap: 10px;
     align-items: center;
     text-align: center;
+    height: 100%;
     img {
       height: 100px;
       width: auto;
@@ -90,14 +99,36 @@
     }
   }
   .content_box {
-    h2 {
+    h2,
+    h4 {
       span {
         font-weight: 800;
         color: $primary;
       }
     }
+    h4 {
+      margin: 1.75rem 0 1rem;
+    }
+    h6 {
+      margin-bottom: 10px;
+    }
     p {
       color: #6a6a6a;
+    }
+  }
+  .reason_step {
+    margin-bottom: 1rem;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .right_wrap {
+    display: flex;
+    flex-direction: column;
+    @include max($md) {
+      flex-direction: column-reverse;
     }
   }
   .form_box {
@@ -129,6 +160,78 @@
     }
   }
   @include max($md) {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+  }
+}
+
+.step_section {
+  padding: 3rem 0 0;
+}
+
+.process_steps {
+  --space: 3rem;
+  --size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space);
+  max-width: 340px;
+  margin: auto;
+  h5,
+  p {
+    margin: 0;
+  }
+  .step {
+    flex-shrink: 0;
+    color: $primary;
+    // height: var(--size);
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid #ddd;
+    padding: 10px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(-1 * (var(--space) + 2px));
+      height: var(--space);
+      width: 4px;
+    }
+    &::before {
+      background-color: #ddd;
+      height: var(--space);
+    }
+    &::after {
+      background-color: $primary;
+      height: 0;
+    }
+    &:first-of-type {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+      color: #fff;
+      transition: 0.2s linear;
+      transition-delay: 0.6s;
+      &::after,
+      &::before {
+        transition: 0.6s ease-in-out;
+      }
+      &::after {
+        height: var(--space);
+      }
+    }
   }
 }

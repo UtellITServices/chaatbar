@@ -58,5 +58,14 @@
       padding: 8px 1.25rem;
       color: #fff;
     }
+    @include max($lg) {
+      padding: 2rem;
+    }
+  }
+  @include max($lg) {
+    min-height: 0;
+    &::before {
+      background-color: rgba(#000, 0.6);
+    }
   }
 }

@@ -1,0 +1,101 @@
+@import "/src/styles/var";
+
+.hmMenu {
+  padding-bottom: 100px;
+
+  .wrapper {
+    --image_width: 45%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    &:nth-last-of-type(odd) {
+      margin-left: auto;
+      .image {
+        &::before {
+          right: auto;
+          left: -2rem;
+        }
+      }
+    }
+
+    .image {
+      height: 300px;
+      flex-shrink: 0;
+      flex-basis: var(--image_width);
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        background-color: #f8f8f8;
+        z-index: -1;
+        top: -2rem;
+        right: -2rem;
+        border-radius: 2rem;
+      }
+      img {
+        border-radius: 2rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media (max-width: $lg) {
+        height: 200px;
+      }
+    }
+
+    .content {
+      padding: 30px;
+
+      h2 {
+        font-family: $font_three;
+        font-size: var(--f28);
+        color: $primary;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-size: var(--f38);
+        line-height: 1;
+        margin: 5px 0 20px;
+      }
+
+      p {
+        @include head_para;
+        // color: #fff;
+      }
+      @media (max-width: $lg) {
+        padding: 1rem 0 10px;
+        h3 {
+          margin: 6px 0 10px;
+        }
+      }
+    }
+    @media (min-width: $lg) {
+      max-width: calc(100% - (var(--image_width) / 4));
+      &:nth-last-of-type(even) {
+        flex-direction: row-reverse;
+      }
+    }
+    @media (max-width: $lg) {
+      --image_width: 100%;
+      flex-wrap: wrap;
+      gap: 0;
+      &:nth-last-of-type(odd) {
+        // flex-wrap: wrap-reverse;
+      }
+      .image {
+        height: 200px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lg) {
+    padding: 0 0 40px;
+  }
+}

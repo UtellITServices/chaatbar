@@ -1,0 +1,47 @@
+@import "/src/styles/var";
+
+.get_touch {
+  overflow: hidden;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+
+  .content {
+    max-width: 600px;
+    text-align: center;
+
+    h3 {
+      font-size: var(--heading2);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include head_para;
+    }
+  }
+
+  .image {
+    max-width: 370px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  @media (max-width: $lg) {
+    padding: 2rem 0 0;
+    .image {
+      opacity: 0.2 !important;
+      position: absolute;
+      top: 4rem;
+      z-index: -1;
+      max-width: 120px;
+      &:last-of-type {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+}

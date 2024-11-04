@@ -17,9 +17,9 @@ function Footer() {
           <div className={styles.headContent}>
             <h2>Contact Details</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s
+              Ready to bring the Chai Bar experience to your community? Get in
+              touch today, and let’s explore the possibilities of you being a
+              part of the ever-expanding Chaat Bar Franchise Family!
             </p>
           </div>
           <Row className="gy-3 justify-content-center">

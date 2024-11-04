@@ -2,16 +2,18 @@ import InputField from "@/components/elements/input";
 import NextImage from "@/components/image/NextImage";
 import { Footer } from "@/layout/footer";
 import PageLayout from "@/layout/pageLayout";
+import { contactYupSchema } from "@/validationSchema/contact";
 import { useFormik } from "formik";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import styles from "./franchises.module.scss";
-import { contactYupSchema } from "@/validationSchema/contact";
 import { toast } from "sonner";
-import { useState } from "react";
+import styles from "./franchises.module.scss";
 
 const Franchise = () => {
   const [loading, setLoading] = useState(false);
+
+  const [activeStep, setActiveStep] = useState(1);
 
   const formik = useFormik({
     initialValues: {
@@ -79,6 +81,28 @@ const Franchise = () => {
     setLoading(false);
   };
 
+  const steps_data = [
+    {
+      text: "Submit the Form",
+    },
+    {
+      text: "Receive the Franchise Application",
+    },
+    {
+      text: "Complete and Return the Form",
+    },
+    {
+      text: "Let’s Grow Together",
+    },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev < steps_data.length ? prev + 1 : 1));
+    }, 2000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <PageLayout>
       <Head>
@@ -87,7 +111,7 @@ const Franchise = () => {
         </title>
         <meta
           name="description"
-          content="Chaat Bar’s menu features delicious regional specialties and comfort food classics made with fresh ingredients. Explore our menu & find your favorite dish! "
+          content="Turn your passion for great food into a thriving business by becoming a part of the ChaatBar family and conquer the outline of success in your local streets of NE Calgary"
         />
       </Head>
 
@@ -98,10 +122,13 @@ const Franchise = () => {
         >
           <Container>
             <div className={styles.content_wrapper}>
-              <h1>Franchises</h1>
+              <h1>
+                Purchase a <br /> <span>Chaatbar</span> Franchise
+              </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                recusandae itaque esse doloribus.
+                Turn your passion for great food into a thriving business by
+                becoming a part of the ChaatBar family and conquer the outline
+                of success in your local streets of NE Calgary
               </p>
             </div>
           </Container>
@@ -109,25 +136,30 @@ const Franchise = () => {
         <section>
           <Container>
             <div className={styles.section_wrap}>
-              <Row className="g-5">
+              <Row className="g-md-5">
                 <Col lg={7}>
                   <div className={styles.content_box}>
                     <h2>
-                      Unlock Success with <span>Chaat Bar&apos;s</span>{" "}
-                      Franchise!
+                      Ready to Start Your <span>Chaat Bar</span> Franchise
+                      Journey?
                     </h2>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Magnam culpa qui id laboriosam, natus ut laudantium eaque
-                      dicta neque non, aspernatur quos recusandae eveniet dolore
-                      doloremque minus. Amet, repudiandae dolor?
+                      Your journey to owning a Chaat Bar franchise starts here!
+                      Begin by filling out the form located below, and
+                      we&apos;ll send a comprehensive PDF of the franchise
+                      application straight to your mailbox. This document will
+                      contain everything that you require and more about the
+                      Chaat bar family and how you can join us.
                     </p>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Magnam culpa qui id laboriosam, natus ut laudantium eaque
-                      dicta neque non, aspernatur quos recusandae eveniet dolore
-                      doloremque minus. Amet, repudiandae dolor?
+                      Once you&apos;ve completed the application, simply send it
+                      back to us via email using the address listed above.
+                      We&apos;re excited to assist you in any way possible so
+                      that your love of good raw cooking can be transformed into
+                      a business. Let&apos;s make your dream of owning a
+                      successful, vibrant Chaat Bar franchise a reality!
                     </p>
+
                     <Row className={`gy-4 ${styles.cards_wrap}`}>
                       <Col md={4} sm={6}>
                         <div className={styles.card}>
@@ -157,55 +189,113 @@ const Franchise = () => {
                         </div>
                       </Col>
                     </Row>
+                    <h4>
+                      Reasons to Join <span>Chaat Bar</span>
+                    </h4>
+                    <div className={styles.reason_step}>
+                      <h6>Proven Business Model</h6>
+                      <p>
+                        Tap into a well-established, successful franchise model
+                        with a currently enjoying a successful customer base and
+                        increasing demand.{" "}
+                      </p>
+                    </div>
+                    <div className={styles.reason_step}>
+                      <h6>Comprehensive Support & Training</h6>
+                      <p>
+                        From site selection to grand opening, we provide
+                        hands-on training and support every step of the way.
+                      </p>
+                      <p>
+                        From choosing a site to the grand opening, we provide
+                        support throughout the process.{" "}
+                      </p>
+                    </div>
+                    <div className={styles.reason_step}>
+                      <h6>Unique & High-Demand Menu</h6>
+                      <p>
+                        Chaat Bar, as mentioned, has a one of a kind appetizing
+                        menu that is in tune with today’s food lovers.{" "}
+                      </p>
+                    </div>
 
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Magnam culpa qui id laboriosam.
+                      At Chaat Bar, we are committed to preparing you for
+                      colossal victory in it. Whether you want marketing help,
+                      all-around training, operational support, or anything
+                      else, the attitude and work ethic of our team is aimed at
+                      making your experience as a Chaat Bar franchisee in NE
+                      Calgary smooth and rewarding..
+                    </p>
+                    <p>
+                      If you’re ready to be part of something unique and
+                      impactful, connect with us today to explore the exciting
+                      opportunity of owning a Chaat Bar franchise!
                     </p>
                   </div>
                 </Col>
                 <Col lg={5}>
-                  <div className={styles.form_box}>
-                    <h3>Get started with us</h3>
-                    <form onSubmit={formik.handleSubmit}>
-                      <div className={styles.form_fields}>
-                        <InputField
-                          label="Name"
-                          name="name"
-                          formik={formik}
-                          placeholder="Enter name"
-                        />
-                        <InputField
-                          label="Email"
-                          name="email"
-                          formik={formik}
-                          placeholder="Enter email"
-                        />
-                        <InputField
-                          label="Phone"
-                          name="phone_number"
-                          formik={formik}
-                          placeholder="Enter phone number"
-                        />
-                        <InputField
-                          as="textarea"
-                          multiple
-                          rows={5}
-                          label="Message"
-                          name="message"
-                          formik={formik}
-                          placeholder="Enter messages"
-                        />
-                        <div className={styles.submit}>
-                          <button
-                            className="btn btn-primary"
-                            disabled={loading}
-                          >
-                            {loading ? "Sending..." : "SUBMIT"}
-                          </button>
+                  <div className={styles.right_wrap}>
+                    <div className={styles.form_box}>
+                      <h3>Get started with us</h3>
+                      <form onSubmit={formik.handleSubmit}>
+                        <div className={styles.form_fields}>
+                          <InputField
+                            label="Name"
+                            name="name"
+                            formik={formik}
+                            placeholder="Enter name"
+                          />
+                          <InputField
+                            label="Email"
+                            name="email"
+                            formik={formik}
+                            placeholder="Enter email"
+                          />
+                          <InputField
+                            label="Phone"
+                            name="phone_number"
+                            formik={formik}
+                            placeholder="Enter phone number"
+                          />
+                          <InputField
+                            as="textarea"
+                            multiple
+                            rows={5}
+                            label="Message"
+                            name="message"
+                            formik={formik}
+                            placeholder="Enter messages"
+                          />
+                          <div className={styles.submit}>
+                            <button
+                              className="btn btn-primary"
+                              disabled={loading}
+                            >
+                              {loading ? "Sending..." : "SUBMIT"}
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
+
+                    <div className={styles.step_section}>
+                      <Container>
+                        <div className={styles.process_steps}>
+                          {steps_data.map((item, index) => (
+                            <div
+                              className={`${styles.step} ${
+                                activeStep < index + 1 ? null : styles.active
+                              }`}
+                              key={index}
+                            >
+                              <h5>{index + 1}</h5>
+                              <p>{item.text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </Container>
+                    </div>
                   </div>
                 </Col>
               </Row>
@@ -213,6 +303,7 @@ const Franchise = () => {
           </Container>
         </section>
       </main>
+
       <Footer />
     </PageLayout>
   );
