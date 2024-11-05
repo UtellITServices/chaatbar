@@ -45,6 +45,7 @@ function Footer() {
                 <div>
                   <h3>Phone</h3>
                   <a href="tel:+1 4034600405">+1 (403)-460-0405</a>
+                  <a href="tel:+1 4034788324">+1 (403)-478-8324</a>
                 </div>
               </div>
             </Col>
@@ -55,6 +56,9 @@ function Footer() {
                 </div>
                 <div>
                   <h3>E-mail</h3>
+                  <a href="mailto:thechaatbarcalgory@gmail.com">
+                    thechaatbarcalgory@gmail.com
+                  </a>
                   <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
                 </div>
               </div>
@@ -77,17 +81,17 @@ function Footer() {
               <ul>
                 <li>
                   <a href="javascript:void(0)">
-                    <FaFacebookF />
+                    <NextImage src="/images/social/facebook.svg" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="javascript:void(0)">
-                    <FaLinkedinIn />
+                    <NextImage src="/images/social/instagram.svg" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="javascript:void(0)">
-                    <FaXTwitter />
+                    <NextImage src="/images/social/tik-tok.svg" alt="" />
                   </a>
                 </li>
               </ul>

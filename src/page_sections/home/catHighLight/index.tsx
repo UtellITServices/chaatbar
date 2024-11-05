@@ -56,12 +56,12 @@ const CatHighlight = () => {
       <Container>
         <div className={styles.hhMenu_inner}>
           <AnimationSection image="/images/Untitled-design-6.jpg">
-            <h2>Best of Both Worlds</h2>
-            <h3>Veg or meat, we love them all</h3>
+            <h2>Garden of Flavors</h2>
+            <h3>Vegetarian Delights, a celebration of taste</h3>
             <p>
-              Our menu celebrates the diversity of Indian cuisine, offering an
-              extensive selection of both vegetarian and non-vegetarian
-              delights.
+              Our menu showcases the vibrant diversity of Indian cuisine,
+              featuring a rich selection of vegetarian delights that will
+              tantalize your palate.
             </p>
           </AnimationSection>
           <AnimationSection image="/images/Untitled-design-7.jpg">
