@@ -1,11 +1,10 @@
-import { useRouter } from "next/router";
-import styles from "./Footer.module.scss";
-import { Col, Container, Row } from "react-bootstrap";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import NextImage from "@/components/image/NextImage";
-import { MdOutlinePhoneIphone } from "react-icons/md";
+import { useRouter } from "next/router";
+import { Col, Container, Row } from "react-bootstrap";
+import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import { MdOutlinePhoneIphone } from "react-icons/md";
+import styles from "./Footer.module.scss";
 
 function Footer() {
   const router = useRouter();
