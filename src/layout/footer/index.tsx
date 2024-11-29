@@ -1,5 +1,7 @@
 import NextImage from "@/components/image/NextImage";
+import { getStore } from "@/utils/functions";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -8,6 +10,15 @@ import styles from "./Footer.module.scss";
 
 function Footer() {
   const router = useRouter();
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const data = getStore();
+      const address = data?.address ?? "";
+      setData(address);
+    }
+  }, []);
 
   return (
     <>
@@ -17,8 +28,8 @@ function Footer() {
             <h2>Contact Details</h2>
             <p>
               Ready to bring the Chai Bar experience to your community? Get in
-              touch today, and let’s explore the possibilities of you being a
-              part of the ever-expanding Chaat Bar Franchise Family!
+              touch today, and let&apos;s explore the possibilities of you being
+              a part of the ever-expanding Chaat Bar Franchise Family!
             </p>
           </div>
           <Row className="gy-3 justify-content-center">
@@ -29,9 +40,7 @@ function Footer() {
                 </div>
                 <div>
                   <h3>Address</h3>
-                  <a href="javascript:void(0)">
-                    6004 Country Hills Blvd NE unit 2030, Calgary, AB T3N 1A8
-                  </a>
+                  <a href="javascript:void(0)">{data}</a>
                 </div>
               </div>
             </Col>
