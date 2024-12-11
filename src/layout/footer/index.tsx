@@ -41,7 +41,7 @@ function Footer() {
                 <div>
                   <h3>Address</h3>
                   <a href="javascript:void(0)">
-                    320 W Creek Dr #105, Chestermere, AB T1X 0B4
+                    6004 Country Hills Blvd NE unit 2030, Calgary, AB T3N 1A8
                   </a>
                 </div>
               </div>
