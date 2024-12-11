@@ -10,7 +10,7 @@ import styles from "./Footer.module.scss";
 
 function Footer() {
   const router = useRouter();
-  const [data, setData] = useState("");
+  const [, setData] = useState("");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -40,7 +40,9 @@ function Footer() {
                 </div>
                 <div>
                   <h3>Address</h3>
-                  <a href="javascript:void(0)">{data}</a>
+                  <a href="javascript:void(0)">
+                    320 W Creek Dr #105, Chestermere, AB T1X 0B4
+                  </a>
                 </div>
               </div>
             </Col>

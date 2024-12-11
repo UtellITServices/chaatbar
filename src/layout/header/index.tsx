@@ -1,17 +1,17 @@
 import NextImage from "@/components/image/NextImage";
-import { getStoreKey, updateAddress } from "@/utils/functions";
+import { getStoreKey } from "@/utils/functions";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Container, Dropdown } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import styles from "./Header.module.scss";
 export default function Header() {
   const router = useRouter();
 
   const [isMenuVisible, setMenuVisible] = useState(false);
-  const [data, setData] = useState("");
+  const [, setData] = useState("");
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -19,10 +19,10 @@ export default function Header() {
     setMenuVisible(!isMenuVisible);
   };
 
-  const handleDropdown = (name: string) => {
-    updateAddress(name);
-    window.location.reload();
-  };
+  // const handleDropdown = (name: string) => {
+  //   updateAddress(name);
+  //   window.location.reload();
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,24 +45,24 @@ export default function Header() {
     }
   }, []);
 
-  const storeList = [
-    {
-      name: "Store 1",
-      key: "store1",
-    },
-    {
-      name: "Store 2",
-      key: "store2",
-    },
-    {
-      name: "Store 3",
-      key: "store3",
-    },
-    {
-      name: "Store 4",
-      key: "store4",
-    },
-  ];
+  // const storeList = [
+  //   {
+  //     name: "Store 1",
+  //     key: "store1",
+  //   },
+  //   {
+  //     name: "Store 2",
+  //     key: "store2",
+  //   },
+  //   {
+  //     name: "Store 3",
+  //     key: "store3",
+  //   },
+  //   {
+  //     name: "Store 4",
+  //     key: "store4",
+  //   },
+  // ];
 
   return (
     <>
@@ -140,7 +140,7 @@ export default function Header() {
                       Franchises
                     </Link>
                   </li>
-                  <Dropdown className={styles.dropdown}>
+                  {/* <Dropdown className={styles.dropdown}>
                     <Dropdown.Toggle id="dropdown-basic">
                       Our stores
                     </Dropdown.Toggle>
@@ -156,7 +156,7 @@ export default function Header() {
                         </Dropdown.Item>
                       ))}
                     </Dropdown.Menu>
-                  </Dropdown>
+                  </Dropdown> */}
                 </ul>
               </div>
             </div>
