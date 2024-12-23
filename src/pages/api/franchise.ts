@@ -1,46 +1,49 @@
 import { emailTemplateFranchise } from "@/components/emailTemplate";
-import sgMail from "@sendgrid/mail";
-import fs from "fs";
+import nodemailer from "nodemailer";
 import path from "path";
 
 export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const body = req.body;
-    sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
-    const pdfPath = path.join(process.cwd(), "public", "file", "form.pdf");
-    const pdfData = fs.readFileSync(pdfPath).toString("base64");
-    const msg = {
-      from: process.env.SEND_GRID_API_EMAIL,
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Only POST requests are allowed" });
+  }
+  const body = req.body;
+
+  if (!body?.email || !body?.name || !body?.message) {
+    return res
+      .status(400)
+      .json({ error: "Missing required fields: to, subject, text" });
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.NEXT_PUBLIC_SMTP_USER,
+        pass: process.env.NEXT_PUBLIC_SMTP_PASS,
+      },
+    });
+
+    const pdfFilePath = path.join(process.cwd(), "public/file/form.pdf");
+
+    const info = await transporter.sendMail({
+      from: process.env.NEXT_PUBLIC_SMTP_USER,
       to: body?.email,
-      subject: `New Message from ${body?.name || ""}`,
+      subject: `The Chaatbar`,
       text: body?.message || body?.name || "",
       html: emailTemplateFranchise(body),
       attachments: [
         {
-          content: pdfData,
-          filename: "your-file.pdf",
-          type: "application/pdf",
-          disposition: "attachment",
+          filename: "chaatbar.pdf",
+          path: pdfFilePath,
         },
       ],
-    };
-    try {
-      // Send email
-      await sgMail.send(msg);
-      res.status(200).json({ message: "Email sent successfully" });
-      console.log("res", res);
-    } catch (error) {
-      console.log("error", error);
-      if (error.response) {
-        console.error("SendGrid error response:", error.response.body);
-        return res.status(500).json({
-          message: "Error sending email",
-        });
-      }
-      res.status(500).json({ message: "Error sending email" });
-    }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+    });
+
+    res.status(200).json({ message: "Email sent successfully", info });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res
+      .status(500)
+      .json({ error: "Failed to send email", details: error.message });
   }
 }
