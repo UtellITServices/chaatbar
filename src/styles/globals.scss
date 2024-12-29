@@ -19,6 +19,60 @@ h6 {
   font-weight: bold;
 }
 
+.custom_btn {
+  font-weight: 500;
+  font-size: var(--f14);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  position: relative;
+  .loader {
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: inherit;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &.loading {
+    .custom_btn_text {
+      color: transparent;
+    }
+  }
+  &.disabled {
+    opacity: 0.9;
+  }
+  // font-size: 16px;
+  &.btn {
+    line-height: 1.25;
+    min-height: 42px;
+    padding: 6px 18px;
+    &.btn-sm {
+      min-height: 36px;
+      padding: 6px 16px;
+    }
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+  &.btn-primary {
+    color: #fff;
+  }
+  &.btn-secondary {
+    color: #fff;
+  }
+  &.btn-light {
+    background-color: var(--theme_color);
+  }
+  &.btn-link {
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
 .field_wrap {
   position: relative;
 
@@ -85,4 +139,44 @@ h6 {
   right: 0;
   font-size: 12px;
   top: 100%;
+}
+
+// ============= table styling =============================
+
+.table_wrapper {
+  th,
+  td {
+    padding: 8px 1rem;
+  }
+  th {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .action_btn {
+    display: flex;
+    gap: 4px;
+    span {
+      flex-shrink: 0;
+      background-color: #fff;
+      border-radius: 50%;
+      color: var(--heading_color);
+      cursor: pointer;
+      width: 24px;
+      font-size: 1rem;
+      aspect-ratio: 1;
+      @include flexCenter;
+      &.edit {
+        color: $primary;
+      }
+      &.delete {
+        color: $danger;
+      }
+      &.view {
+        color: $secondary;
+      }
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
 }

@@ -1,0 +1,67 @@
+@use "/src/styles/var" as *;
+
+.addModal {
+  padding: 1.2rem;
+  position: relative;
+
+  .field_wrapper {
+    --space: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-1 * var(--space));
+    gap: calc(2 * var(--space)) 0;
+    > * {
+      padding: 0 var(--space);
+      flex-basis: 100%;
+      &.width50 {
+        @media (min-width: 992px) {
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+      }
+      &.width33 {
+        @media (min-width: 992px) {
+          flex-basis: 33%;
+          max-width: 33%;
+        }
+      }
+    }
+  }
+  .sub_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .single_subMenu {
+    padding: 1.75rem 1rem 1rem;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    position: relative;
+    .field_wrapper {
+      gap: calc(1.5 * var(--space)) 0;
+    }
+    .delete_icon {
+      cursor: pointer;
+      padding: 6px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .checkbbox_wrap {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 10px;
+  }
+  .button_wrap {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: center;
+    button {
+      min-width: 110px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "/src/styles/var";
+.topBar {
+  box-shadow: 0px 4px 10px -8px rgb(0 0 0 / 35%);
+  height: var(--topBar_width);
+  background-color: var(--bg_theme_color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 4px 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--theme_color);
+}
+.topBar_search {
+  button {
+    border: none;
+    font-size: 1.45rem;
+    padding: 4px;
+    background: none;
+    line-height: 1;
+    color: inherit;
+  }
+}
+.topBar_right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.login_user {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  img {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .name {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-transform: capitalize;
+    span {
+      display: block;
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

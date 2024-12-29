@@ -1,0 +1,14 @@
+@use "/src/styles/var" as *;
+
+.portfolioModal {
+  padding: 1rem;
+  .field_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .button_wrap {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}

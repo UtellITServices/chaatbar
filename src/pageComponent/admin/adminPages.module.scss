@@ -1,0 +1,39 @@
+@use "/src/styles/var" as *;
+
+.heading {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form_card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border_color);
+}
+.field_wrap {
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  .remove_btn {
+    margin-top: 1.6rem;
+  }
+  & > * {
+    &:not(button) {
+      flex-basis: 45%;
+    }
+  }
+}
+.form_loader {
+  min-height: 100px;
+  @include flexCenter;
+}
+.submit_btn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}

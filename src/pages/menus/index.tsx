@@ -8,32 +8,72 @@ import { Footer } from "@/layout/footer";
 import PageLayout from "@/layout/pageLayout";
 import Head from "next/head";
 import styles from "./menu.module.scss";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/firebase.config";
+import { useEffect, useState } from "react";
+import { useStore } from "@/store";
+import { ThreeDots } from "react-loader-spinner";
 
-export async function getServerSideProps() {
-  try {
-    const menus = await fetch(
-      `https://cloudapi.rootficus.com/api/v1/vendor/get_menu`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": "cus_R6KbnfvuFAzrSy",
-        },
-        body: JSON.stringify({
-          accessKey: process.env.API_KEY,
-        }),
-      }
-    );
-    const menuData = await menus.json();
-    return { props: { menuData } };
-  } catch (err) {
-    return { props: { menuData: null } };
+// export async function getServerSideProps() {
+//   try {
+//     const menus = await fetch(
+//       `https://cloudapi.rootficus.com/api/v1/vendor/get_menu`,
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "x-api-key": "cus_R6KbnfvuFAzrSy",
+//         },
+//         body: JSON.stringify({
+//           accessKey: process.env.API_KEY,
+//         }),
+//       }
+//     );
+//     const menuData = await menus.json();
+//     return { props: { menuData } };
+//   } catch (err) {
+//     return { props: { menuData: null } };
+//   }
+// }
+
+export default function Menus() {
+  const [loading, setLoading] = useState(false);
+  const { menuList, setMenuList } = useStore((state: any) => state);
+
+  async function getCategoryWithProducts() {
+    const categoryCollectionRef = collection(db, "category");
+    const menuCollectionRef = collection(db, "menus");
+
+    try {
+      setLoading(true);
+      const [categoriesSnapshot, menusSnapshot] = await Promise.all([
+        getDocs(categoryCollectionRef),
+        getDocs(menuCollectionRef),
+      ]);
+      const categories = categoriesSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      const menus = menusSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      const result = categories.map((category: any) => ({
+        ...category,
+        menus: menus.filter((menu: any) => menu.category_id === category.id),
+      }));
+      setMenuList(result);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
+    }
   }
-}
 
-export default function Menus({ ...props }) {
-  const { menuData } = props;
-  const menuList = menuData?.data ?? [];
+  useEffect(() => {
+    getCategoryWithProducts();
+  }, []);
+
   return (
     <PageLayout>
       <Head>
@@ -132,7 +172,11 @@ export default function Menus({ ...props }) {
           style={{ backgroundImage: 'url("/images/menus/paper_bg.png")' }}
         >
           <Container>
-            {menuList?.length ? (
+            {loading ? (
+              <div className="d-flex justify-content-center py-5">
+                <ThreeDots width="80" color="var(--primary)" />
+              </div>
+            ) : menuList?.length ? (
               <Tabs>
                 <div className={styles.wrapper}>
                   <NextImage
@@ -171,7 +215,7 @@ export default function Menus({ ...props }) {
                           <h1>{item?.title}</h1>
                           <h3>{item.description}</h3>
                         </div>
-                        {item?.data?.map((subItem) => (
+                        {item?.menus?.map((subItem) => (
                           <div
                             key={subItem?.id}
                             className={styles.inner_wrapper}

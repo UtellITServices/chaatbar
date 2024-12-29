@@ -1,0 +1,30 @@
+@import "/src/styles/var";
+
+.heading {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+.projects {
+  .table {
+    .contain_width {
+      width: 1%;
+    }
+  }
+}
+.confirm_delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  .confirm_delete_btn {
+    display: flex;
+    gap: 10px;
+  }
+}
