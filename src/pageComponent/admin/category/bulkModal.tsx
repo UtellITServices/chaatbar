@@ -1,7 +1,7 @@
 import CustomButton from "@/components/elements/button";
 import InputField from "@/components/elements/input";
 import { db } from "@/firebase.config";
-import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { useFormik } from "formik";
 import { FC, useState } from "react";
 import { toast } from "sonner";
@@ -19,7 +19,7 @@ const BulkUploadForm: FC<IProps> = ({ handleClose, data }) => {
     initialValues: {
       json: "",
     },
-    onSubmit: async (values) => {
+    onSubmit: async () => {
       setLoading(true);
       try {
         await addDataToCategory();

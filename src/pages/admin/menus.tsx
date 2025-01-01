@@ -1,9 +1,9 @@
 import CustomButton from "@/components/elements/button";
+import PopupLayout from "@/components/elements/popup";
 import { db } from "@/firebase.config";
 import AdminLayout from "@/layout/adminDashboard";
 import AddEditMenu from "@/pageComponent/admin/menu/addEditMenu";
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { MdModeEditOutline } from "react-icons/md";
@@ -11,7 +11,6 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "sonner";
 import styles from "./admin.module.scss";
-import PopupLayout from "@/components/elements/popup";
 
 const Menus = () => {
   const [addModal, setAddModal] = useState(false);

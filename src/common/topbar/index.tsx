@@ -7,7 +7,7 @@ import { MdLockOutline } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import styles from "./style.module.scss";
 import { useRouter } from "next/router";
-import NextImage from "@/components/Nextimage";
+import NextImage from "@/components/NextImage";
 
 interface IProps {
   toggleSidebar: () => void;
