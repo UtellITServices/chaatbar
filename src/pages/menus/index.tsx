@@ -78,7 +78,7 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Food Menu in SW Calgary | Explore Food Menu of the Chaat Bar
+          Best Food Menu in NE Calgary | Explore Food Menu of the Chaat Bar
         </title>
         <meta
           name="description"
