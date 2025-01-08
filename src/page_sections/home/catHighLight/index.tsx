@@ -59,15 +59,16 @@ const CatHighlight = () => {
             <h2>Garden of Flavors</h2>
             <h3>Vegetarian Delights, a celebration of taste</h3>
             <p>
-              Our menu showcases the vibrant diversity of Indian cuisine,
-              featuring a rich selection of vegetarian delights that will
-              tantalize your palate.
+              Menu at Chaat Bhar Bar - top Indian restaurant in Chestermere and
+              NE Calgary region - showcases the vibrant diversity of Indian
+              cuisine, featuring a rich selection of vegetarian delights that
+              will tantalize your palate.
             </p>
           </AnimationSection>
           <AnimationSection image="/images/Untitled-design-7.jpg">
             <div className={styles.content}>
               <h2>Irresistible Sweet Treats</h2>
-              <h3>Sweet Treats for your Mouth Only</h3>
+              <h3>Sweet Treats for Your Mouth Only</h3>
               <p>
                 Dive into the multiverse of mouthwatering desserts from Indian
                 streets that will leave your mouth craving for more.
@@ -80,7 +81,8 @@ const CatHighlight = () => {
             <p>
               Experience the thrill of authentic Indian spices in every bite.
               Unique tastes in every dish served with culinary love and
-              immaculate hospitality.
+              immaculate hospitality at an Indian street food restaurant in
+              Chestermere and NE Calgary.
             </p>
           </AnimationSection>
         </div>

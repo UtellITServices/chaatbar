@@ -57,23 +57,32 @@ export default function Contact() {
   return (
     <PageLayout>
       <Head>
-        <title>Contact</title>
+        <title>
+          Contact Best Amritsari Kulcha Restaurant NE Calgary & Chestermere |
+          Samosa Chaat Fast Food Point{" "}
+        </title>
+        <meta
+          name="description"
+          content="Contact Chaat Bar - best fast food restaurant in NE Calgary where guests can enjoy traditional Indian flavors! Give feedback on best Amritsari kulcha and samosa chaat in Chestermere, Alberta."
+        />
       </Head>
 
       <section className={styles.contact}>
         <Container>
           <div className={styles.header}>
             <h2>Get in Touch </h2>
+            <h5>With Top Fast Food Point in Chestermere, Alberta</h5>
             <p>
-              Fill out the form below and our friendly team will get back to you
-              promptly. Got a reservation request? A catering inquiry? Or simply
-              want to share your experience? No problem! We are here to listen
-              and ensure your satisfaction.
+              Got questions about our menu featuring the best Amritsari Kulcha
+              in Calgary or most authentic samosa chaat Chestermere has to
+              offer? Want to make a reservation or inquire about catering? Fill
+              out the form below, and our friendly team will get back to you
+              promptly!
             </p>
             <p>
-              Chaat Bar, YYC strives to create a welcoming environment for all
-              our guests in New York. Your feedback is critical to help us
-              improve and deliver exceptional service.
+              Chaat Bar believes in providing the best fast food Calgary has to
+              offer along with authentic Indian flavors. You can fill out the
+              form below! We're always open to feedback from our guests.
             </p>
           </div>
           <div className={styles.wrapper}>
@@ -279,7 +288,10 @@ export default function Contact() {
         </Container>
       </section> */}
 
-      <Footer />
+      <Footer
+        title="Contact Best Fast Food Restaurant in NE Calgary"
+        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere and NE Calgary? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
+      />
     </PageLayout>
   );
 }

@@ -45,13 +45,14 @@ const GetInTouch = () => {
       >
         <h3>Get in Touch with Us</h3>
         <p>
-          Have a question, feedback, or just want to say hello? We’d love to
-          hear from you! Fill out the form below and our friendly team will get
-          back to you as soon as possible.
+          Have a question, feedback, or just want to say hello? We'd love to
+          hear from you! Fill out the form below and the friendly team at the
+          best Indian restaurant in Chestermere, Alberta will get back to you as
+          soon as possible.
         </p>
         <p>
           Your satisfaction is our top priority and we’re here to ensure your
-          experience at The Chaat Bar and Parontha Place in Calgary, US is
+          experience at The Chaat Bar and Parontha Place in NE Calgary is
           nothing short of exceptional.
         </p>
       </motion.div>

@@ -78,11 +78,12 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Food Menu in NE Calgary | Explore Food Menu of the Chaat Bar
+          Best Fast Food Menu NE Calgary | Amritsari Kulcha Chestermere | Samosa
+          Chaat NE
         </title>
         <meta
           name="description"
-          content="Chaat Bar’s menu features delicious regional specialties and comfort food classics made with fresh ingredients. Explore our menu & find your favorite dish! "
+          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha in Chestermere and authentic samosa chaat in NE Calgary! A journey of vibrant Indian flavors awaits at the best fast food restaurant in NE Calgary."
         />
       </Head>
 
@@ -97,11 +98,16 @@ export default function Menus() {
                 <div className={styles.content_wrapper}>
                   <h2>
                     Chaat Bar&apos;s
-                    <span>Delicious Menu</span>
+                    <span>
+                      Best Delicious
+                      <br /> Fast Food Menu Calgary
+                    </span>
                   </h2>
                   <p>
-                    Do you know what makes Chaat Bar the best restaurant in
-                    Southwest Calgary? Our menu! It will take you on a
+                    Do you know what makes Chaat Bar the best fast-food
+                    restaurant in Chestermere and NE Calgary? It’s our menu!
+                    Featuring everything from authentic samosa chaat to the best
+                    Amritsari kulcha in Calgary, it will take you on a
                     delightful adventure through Canada’s culinary landscape. It
                     also features regional specialties you’ll love.
                   </p>

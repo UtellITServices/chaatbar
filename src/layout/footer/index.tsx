@@ -8,7 +8,12 @@ import { IoMdMail } from "react-icons/io";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import styles from "./Footer.module.scss";
 
-function Footer() {
+interface IProps {
+  title?: string;
+  description?: string;
+}
+
+function Footer({ title, description }: IProps) {
   const router = useRouter();
   const [, setData] = useState("");
 
@@ -25,11 +30,18 @@ function Footer() {
       <section className={styles.contactDetail}>
         <Container className={styles.container}>
           <div className={styles.headContent}>
-            <h2>Contact Details</h2>
+            <h2>{title ?? "Contact Details"}</h2>
             <p>
-              Ready to bring the Chai Bar experience to your community? Get in
-              touch today, and let&apos;s explore the possibilities of you being
-              a part of the ever-expanding Chaat Bar Franchise Family!
+              {description ? (
+                description
+              ) : (
+                <>
+                  Ready to bring the Chaat Bar experience - best samosa chaat
+                  and Amritsari kulcha restaurant - to your community? Get in
+                  touch today, and let's explore the possibilities of you being
+                  a part of the ever-expanding Chaat Bar Franchise Family!
+                </>
+              )}
             </p>
           </div>
           <Row className="gy-3 justify-content-center">
@@ -41,7 +53,7 @@ function Footer() {
                 <div>
                   <h3>Address</h3>
                   <a href="javascript:void(0)">
-                    6004 Country Hills Blvd NE unit 2030, Calgary, AB T3N 1A8
+                    6004 Country Hills Blvd NE Unit 2030, Calgary, AB T3N 1A8
                   </a>
                 </div>
               </div>
@@ -66,8 +78,8 @@ function Footer() {
                 </div>
                 <div>
                   <h3>E-mail</h3>
-                  <a href="mailto:thechaatbarcalgory@gmail.com">
-                    thechaatbarcalgory@gmail.com
+                  <a href="mailto:thechaatbarcalgary@gmail.com">
+                    thechaatbarcalgary@gmail.com
                   </a>
                   <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
                 </div>

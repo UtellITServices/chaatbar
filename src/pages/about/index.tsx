@@ -10,7 +10,14 @@ export default function About() {
   return (
     <PageLayout>
       <Head>
-        <title>About Us</title>
+        <title>
+          About Best Samosa Chaat Restaurant | Fast Food Calgary | Amritsari
+          Kulcha Chestermere{" "}
+        </title>
+        <meta
+          name="description"
+          content="Learn about Chaat Bar featuring the best Amritsari Kulcha in Chestermere and authentic samosa chaat NE Calgary! Everything about best fast-food restaurant in NE Calgary & Chestermere!"
+        />
       </Head>
 
       <section className={styles.main}>
@@ -18,7 +25,10 @@ export default function About() {
         <Container>
           <div className={styles.order}>
             <h2>Discover Our Story</h2>
-            <h5>Embracing the Essence of Indian Street Food in YYC</h5>
+            <h5>
+              Embracing the Essence of Samosa Chat and Best Indian Fast Food in
+              Chestermere and NE Calgary
+            </h5>
           </div>
         </Container>
       </section>
@@ -29,23 +39,27 @@ export default function About() {
               <div className={styles.content_wrapper}>
                 <h5>Welcome</h5>
                 <h3>Who We Are</h3>
-                <h4>A Celebration of Canadian Culinary Traditions</h4>
+                <h4>
+                  A Celebration of Indian Street Food and Canadian Culinary
+                  Traditions
+                </h4>
                 <div className={styles.description}>
                   <p>
                     Chaat Bar is an experienced culinary team driven by a
                     passion for bringing the unique flavors of Indian street
-                    dishes to the lively streets of YYC. With our deep love for
-                    street food and a commitment to authenticity, we have
+                    dishes to the lively streets of Chestermere and NE Calgary.
+                    With our deep love for street food like samosa chaat and
+                    Amritsari kulcha and a commitment to authenticity, we have
                     meticulously crafted a menu that showcases the diverse
-                    culinary traditions found in {`India’s`} vibrant street food
-                    scene.
+                    culinary traditions found in India’s vibrant street fast
+                    food scene.
                   </p>
                   <p>
-                    With our desi dishes, we can transport you to the bustling
+                    With our desi dishes, we transport you to the bustling
                     streets of Mumbai, Kolkata, and Delhi. Streets, where the
-                    tantalising aroma of spices fills the air and every bite is
-                    a symphony of flavours. Experience the magic of Indian
-                    street food right here in the Big Apple with Chaat Bar
+                    tantalizing aroma of spices fills the air and every bite is
+                    a symphony of flavors. Experience the magic of Indian street
+                    food right here in NE Calgary with Chaat Bar.
                   </p>
                 </div>
                 {/* <Link className={styles.main_btn} href={""}>
@@ -84,12 +98,14 @@ export default function About() {
               <Col xl={7}>
                 <Col xxl={10}>
                   <div className={styles.cuisinR}>
-                    <h5>OUR MISSION </h5>
+                    <h5>OUR MISSION</h5>
                     <p className="">
                       To delight food lovers in YYC with the authentic and
-                      vibrant flavours of Indian street food. Grill and Chow
-                      serves up a culinary experience that captures the essence
-                      of the bustling streets of India.
+                      vibrant flavors of the best Indian street fast food. Grill
+                      and Chow serve up a culinary experience that captures the
+                      essence of the bustling streets of India. Whether you’re
+                      looking for the samosa chaat in Chestermere or Amritsari
+                      Kulcha in NE Calgary, we’ve got something for everyone!
                     </p>
                   </div>
                 </Col>
@@ -109,14 +125,14 @@ export default function About() {
           <Row className={styles.row}>
             <Col lg={6}>
               <div className={styles.restA}>
-                <h5>OUR VISION </h5>
-
+                <h5>OUR VISION</h5>
                 <p>
-                  As a leading Indian restaurant in Calgary, Chaat Bar wants to
-                  become a go-to destination for those craving a taste of
-                  {`India’s`} diverse street food. We want to create a vibrant
-                  and immersive dining experience that leaves a lasting
-                  impression on the minds of our customers, making them say WOW!
+                  As a leading Indian restaurant in Chestermere, Chaat Bar aims
+                  to become the go-to destination for those craving authentic
+                  street food including the best Amritsari Kulcha in Calgary. We
+                  strive to create a vibrant and immersive dining experience
+                  that leaves a lasting impression, making every visit
+                  WOW-worthy!
                 </p>
                 <p></p>
               </div>
@@ -137,11 +153,12 @@ export default function About() {
             </Col>
             <Col lg={6}>
               <div className={styles.restA}>
-                <h5>Contact Now</h5>
+                <h5>Contact Best Fast Food Restaurant Calgary</h5>
                 <p className={styles.weighted}>
                   Ready to embark on a gourmet journey? Contact us to reserve a
-                  table, inquire about our catering services or simply share
-                  your thoughts. We’re waiting to hear from you!
+                  table, inquire about our catering services, or simply share
+                  your thoughts. From the best fast food in Calgary to
+                  traditional street favorites, we’re waiting to hear from you!
                 </p>
               </div>
             </Col>
@@ -171,12 +188,13 @@ export default function About() {
 
             <div className={styles.joincontent}>
               <div className={styles.joinSet}>
-                <h5>They did said:</h5>
+                <h5>They Did Say:</h5>
                 <p>
                   {`“Food`} is the ingredient that binds us together,
                   transcending borders and cultures, and sparking joy in every{" "}
                   {`bite.”`}
-                  Kamander Brar, Founder, The Chaat Bar and Parontha {`Place"`}
+                  <br />- Kamander Brar, Founder, The Chaat Bar and Parontha
+                  Place
                 </p>
                 {/* <Link className={styles.main_btn} href={""}>
                   Learn More
