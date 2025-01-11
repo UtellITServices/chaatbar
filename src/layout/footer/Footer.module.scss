@@ -1,34 +1,68 @@
 @import "/src/styles/var";
 
 .contactDetail {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: #f1ead3;
+  .contact_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    @include min($md) {
+      flex-direction: row;
+      max-width: 1100px;
+      margin: auto;
+    }
+  }
+  .single_side {
+    @include min($md) {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 0 2rem;
+      &:first-of-type {
+        border-right: 1px solid #ddd;
+      }
+    }
+    h5 {
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+  }
+  .desc_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 6px;
+  }
 
   .contentWrapper {
     display: flex;
-    align-items: center;
+    width: 100%;
+    align-items: flex-start;
     gap: 15px;
-    margin: auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 14px 20px;
     background: #ffffff;
     border-radius: 23px;
-    height: 100%;
+    &:not(:first-child) {
+      margin-bottom: 1.15rem;
+    }
 
     h3 {
       color: #253d4e;
+      margin: 0 0 4px;
       font-size: 18px;
-      line-height: 22px;
     }
 
     a {
-      display: block;
+      // display: block;
+      line-height: 1.1;
       color: #adadad;
-      font-size: 16px;
+      font-size: 14px;
       text-decoration: none;
     }
 
     .icon {
-      font-size: 50px;
+      font-size: 24px;
+      line-height: 1;
       color: $primary;
     }
     @media (max-width: $lg) {
@@ -49,12 +83,11 @@
   }
 
   .headContent {
-    max-width: 730px;
+    width: 100%;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
   }
-
   h2 {
     font-size: var(--heading2);
     color: #253d4e;

@@ -2,7 +2,7 @@ import NextImage from "@/components/image/NextImage";
 import { getStore } from "@/utils/functions";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { MdOutlinePhoneIphone } from "react-icons/md";
@@ -44,48 +44,88 @@ function Footer({ title, description }: IProps) {
               )}
             </p>
           </div>
-          <Row className="gy-3 justify-content-center">
-            <Col lg={4} md={6}>
+          <div className={styles.contact_wrap}>
+            <div className={styles.single_side}>
+              <h5>Chaatbar Calgary</h5>
               <div className={styles.contentWrapper}>
                 <div className={styles.icon}>
                   <FaLocationDot />
                 </div>
                 <div>
                   <h3>Address</h3>
-                  <a href="javascript:void(0)">
-                    6004 Country Hills Blvd NE Unit 2030, Calgary, AB T3N 1A8
-                  </a>
+                  <div className={styles.desc_wrap}>
+                    <a href="javascript:void(0)">
+                      6004 Country Hills Blvd NE Unit 2030, Calgary, AB T3N 1A8
+                    </a>
+                  </div>
                 </div>
               </div>
-            </Col>
-
-            <Col lg={4} md={6}>
               <div className={styles.contentWrapper}>
                 <div className={styles.icon}>
                   <MdOutlinePhoneIphone />
                 </div>
                 <div>
                   <h3>Phone</h3>
-                  <a href="tel:+1 4034600405">+1 (403)-460-0405</a>
-                  <a href="tel:+1 4034788324">+1 (403)-478-8324</a>
+                  <div className={styles.desc_wrap}>
+                    <a href="tel:+1 4034600405">+1 (403)-460-0405</a>
+                    <a href="tel:+1 4034788324">+1 (403)-478-8324</a>
+                  </div>
                 </div>
               </div>
-            </Col>
-            <Col lg={4} md={6}>
               <div className={styles.contentWrapper}>
                 <div className={styles.icon}>
                   <IoMdMail />
                 </div>
                 <div>
                   <h3>E-mail</h3>
-                  <a href="mailto:thechaatbarcalgary@gmail.com">
-                    thechaatbarcalgary@gmail.com
-                  </a>
-                  <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
+                  <div className={styles.desc_wrap}>
+                    <a href="mailto:thechaatbarcalgary@gmail.com">
+                      thechaatbarcalgary@gmail.com
+                    </a>
+                    <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
+                  </div>
                 </div>
               </div>
-            </Col>
-          </Row>
+            </div>
+            <div className={styles.single_side}>
+              <h5>Chaatbar Chestermere</h5>
+              <div className={styles.contentWrapper}>
+                <div className={styles.icon}>
+                  <FaLocationDot />
+                </div>
+                <div>
+                  <h3>Address</h3>
+                  <div className={styles.desc_wrap}>
+                    <a href="javascript:void(0)">
+                      320 W Creek Dr, Chestermere, AB T1X 0B4, Canada
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.contentWrapper}>
+                <div className={styles.icon}>
+                  <MdOutlinePhoneIphone />
+                </div>
+                <div>
+                  <h3>Phone</h3>
+                  <div className={styles.desc_wrap}>
+                    <a href="tel:+1 8255401590">+1 825-540-1590</a>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.contentWrapper}>
+                <div className={styles.icon}>
+                  <IoMdMail />
+                </div>
+                <div>
+                  <h3>E-mail</h3>
+                  <div className={styles.desc_wrap}>
+                    <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
       <footer id="footer" className={styles.footer}>
