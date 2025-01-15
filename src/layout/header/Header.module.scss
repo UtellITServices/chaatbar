@@ -43,7 +43,14 @@
   .logo {
     position: relative;
     z-index: 1;
-
+    span {
+      position: absolute;
+      left: 45%;
+      font-weight: 700;
+      top: 0%;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
     img {
       width: auto;
       height: 66px;

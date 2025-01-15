@@ -64,6 +64,31 @@ export default function Header() {
   //   },
   // ];
 
+  const is_calgary = router.pathname.startsWith("/calgary");
+
+  const navLink = [
+    {
+      name: "Home",
+      link: is_calgary ? "/calgary" : "/chestermere",
+    },
+    {
+      name: "About",
+      link: is_calgary ? "/calgary/about" : "/chestermere/about",
+    },
+    {
+      name: "Our Menu",
+      link: is_calgary ? "/calgary/menus" : "/chestermere/menus",
+    },
+    {
+      name: "Contact Us",
+      link: is_calgary ? "/calgary/contact" : "/chestermere/contact",
+    },
+    {
+      name: "Franchises",
+      link: is_calgary ? "/calgary/franchises" : "/chestermere/franchises",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -78,8 +103,9 @@ export default function Header() {
         <Container>
           <div className={styles.wrapper}>
             <div className={styles.logo}>
-              <Link href="/">
-                <NextImage src="/images/logo.png" alt="Payorio" />
+              <span>{is_calgary ? "Calgary" : "Chestermere"}</span>
+              <Link href={is_calgary ? "/calgary" : "/chestermere"}>
+                <NextImage src="/images/logo.png" alt="logo" />
               </Link>
             </div>
             <div
@@ -89,57 +115,18 @@ export default function Header() {
             >
               <div className={styles.menu_wrapper}>
                 <ul className={styles.ul}>
-                  <li className={styles.nav_item}>
-                    <Link
-                      className={`${styles.nav_link} ${
-                        router.pathname === "/" ? styles.active : ""
-                      } `}
-                      href="/"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className={styles.nav_item}>
-                    <Link
-                      className={`${styles.nav_link} ${
-                        router.pathname === "/about" ? styles.active : ""
-                      } `}
-                      href="/about"
-                    >
-                      About
-                    </Link>
-                  </li>
-                  <li className={styles.nav_item}>
-                    <Link
-                      className={`${styles.nav_link} ${
-                        router.pathname === "/menus" ? styles.active : ""
-                      } `}
-                      href="/menus"
-                    >
-                      Our Menu
-                    </Link>
-                  </li>
-
-                  <li className={styles.nav_item}>
-                    <Link
-                      className={`${styles.nav_link} ${
-                        router.pathname === "/contact" ? styles.active : ""
-                      } `}
-                      href="/contact"
-                    >
-                      Contact Us
-                    </Link>
-                  </li>
-                  <li className={styles.nav_item}>
-                    <Link
-                      className={`${styles.nav_link} ${
-                        router.pathname === "/franchises" ? styles.active : ""
-                      } `}
-                      href="/franchises"
-                    >
-                      Franchises
-                    </Link>
-                  </li>
+                  {navLink.map((nav) => (
+                    <li className={styles.nav_item} key={nav.name}>
+                      <Link
+                        className={`${styles.nav_link} ${
+                          router.pathname === nav.link ? styles.active : ""
+                        } `}
+                        href={nav.link}
+                      >
+                        {nav.name}
+                      </Link>
+                    </li>
+                  ))}
                   {/* <Dropdown className={styles.dropdown}>
                     <Dropdown.Toggle id="dropdown-basic">
                       Our stores
