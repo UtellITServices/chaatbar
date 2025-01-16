@@ -115,7 +115,9 @@ function Footer({ title, description }: IProps) {
               <NextImage
                 src="/images/logo.png"
                 alt=""
-                onClick={() => router.push("/")}
+                onClick={() =>
+                  router.push(is_calgary ? "/calgary" : "/chestermere")
+                }
               />
             </div>
 

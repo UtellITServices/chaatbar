@@ -355,7 +355,7 @@ export default function Home() {
                   <div className={styles.see_all}>
                     <div
                       className={styles.see_btn}
-                      onClick={() => router.push("/menus")}
+                      onClick={() => router.push("/chestermere/menus")}
                     >
                       <span className={styles.icon}>
                         <FaArrowRight />
