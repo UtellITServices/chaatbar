@@ -98,7 +98,7 @@ export default function Home() {
         <title>ChatBar</title>
         <meta
           name="description"
-          content="Best Indian restaurant in Chestermere City and NE Calgary! Experience the flavors of Indian street food brought to you by top restaurant in Calgary."
+          content="Best Indian restaurant in NE Calgary! Experience the flavors of Indian street food brought to you by top restaurant in Calgary."
         />
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         <link rel="icon" href="/favicon.ico" />
@@ -136,13 +136,13 @@ export default function Home() {
           <Container>
             <div className={styles.banner_inner}>
               <div className={styles.content}>
-                <h3>Flavors of India on the streets of YYC!!</h3>
-                <h1>CHAAT BAR</h1>
+                <h3>Flavors of India on the streets of YYC !!</h3>
+                <h1>CHAAT BAR - Best in Calgary</h1>
                 {/* <h3>Best Indian Food Point in Calgary</h3> */}
                 <h4>
-                  Welcome to Chaat Bar and Parontha Place where we're spicing up
-                  the culinary scene of Chestermere and NE Calgary with
-                  authentic Indian street food.
+                  Welcome to Chaat Bar and Parontha Place where we're bringing
+                  bold flavors to NE Calgary’s food scene with authentic Indian
+                  street cuisine.
                 </h4>
               </div>
               <div className={styles.image}>
@@ -174,10 +174,10 @@ export default function Home() {
               <h3>What Makes Our Indian Street Food Restaurant Special?</h3>
               <p>
                 The best Indian street food served at The Chaat Bar and Parontha
-                Place in Chestermere and NE Calgary is more than just a snack or
-                meal. It's a sensory adventure that will transport you to the
-                bustling roads of Mumbai, Delhi, Kolkata, and Amritsar. Here's
-                what sets our street food apart:
+                Place in NE Calgary is more than just a snack or meal. A sensory
+                escapade that will transport you to the lively streets of
+                Mumbai, Delhi, Kolkata, and Amritsar. Here’s what sets our
+                street food exceptional:
               </p>
             </div>
             <div className={styles.slider}>
@@ -208,19 +208,18 @@ export default function Home() {
                       <div className={styles.slideCount}>
                         <span>0{currentSlide}</span> / 0{totalSlides}
                       </div>
-                      <h2>Bursting with Authentic Flavors:  </h2>
+                      <h2>Bursting with Authentic Flavors:</h2>
                       <p>
-                        We believe in preserving the essence of traditional
-                        Indian street food recipes served on the streets for
-                        centuries. Each dish at the best Indian street food
-                        restaurant in Calgary is crafted with care using a
-                        harmonious blend of aromatic spices, fresh ingredients,
-                        and time-honored recipes.
+                        We believe in honoring the soul of traditional Indian
+                        street food recipes cherished for generations. Each dish
+                        at the best Indian street food restaurant in Calgary is
+                        crafted with care using a harmonious blend of aromatic
+                        spices, fresh ingredients, and age-old recipes.
                       </p>
                       <p>
                         From the tangy chaats to the succulent kebabs, every
-                        bite is a burst of authentic flavors that will transport
-                        you to the vibrant streets of India.
+                        bite is a burst of authentic flavors that will whisk you
+                        away to the vibrant streets of India.
                       </p>
                     </div>
                   </div>
@@ -239,15 +238,15 @@ export default function Home() {
                         As the top Indian street food restaurant in the
                         northeastern quadrant of Calgary city, we understand
                         that street food is not only about taste but also about
-                        visual appeal. Our culinary team takes pride in
-                        presenting each dish as a vibrant work of art,
-                        captivating your senses even before the first bite.
+                        visual allure. Our culinary team takes pride in
+                        presenting each dish as a vivid masterpiece, captivating
+                        your senses even before the first bite.
                       </p>
                       <p>
-                        From the vibrant colors of sauces to artistic garnishes,
+                        From the brilliant hues of sauces to artistic garnishes,
                         we make sure that every plate is a feast for the eyes,
                         showcasing the charm of the best Indian street food in
-                        NE Calgary and Chestermere!
+                        NE Calgary!
                       </p>
                     </div>
                   </div>
@@ -266,14 +265,13 @@ export default function Home() {
                       </div>
                       <h2>Innovation Meets Tradition:</h2>
                       <p>
-                        While we pay homage to the rich culinary heritage of
+                        While we pay homage to the rich culinary legacy of
                         India, we also infuse our street food with a touch of
-                        innovation. Our skilled Indian chefs in NE Calgary and
-                        Chestermere are constantly experimenting with new
-                        flavors, textures, and presentation styles. They are
-                        crafting a menu that seamlessly blends tradition with
-                        contemporary flair. Thus delivering the best desi
-                        restaurant experience also in Chestermere, Alberta!
+                        innovation. Our skilled Indian chefs in NE Calgary are
+                        constantly experimenting with new flavors, textures, and
+                        presentation styles. They are crafting a menu that
+                        beautifully marries tradition with contemporary flair.
+                        Thus delivering the ultimate desi dining experience.
                       </p>
                     </div>
                   </div>
@@ -325,16 +323,16 @@ export default function Home() {
               <p>
                 Every week or so, we will bring you an array of exciting
                 limited-time specials from Indian streets. These best Indian
-                foods served at our restaurant will surprise your taste buds and
-                keep you coming back for more. From innovative twists on classic
+                foods served at our restaurant will excite your palate. You will
+                keep coming back for more! From creative renditions of classic
                 street dishes to seasonal surprises, our culinary team is
                 constantly pushing the boundaries to offer you a unique dining
                 experience.
               </p>
               <p>
-                Don't miss out on these delicious delights - stop by The Chaat
-                Bar and Parontha Place in Chestermere and NE Calgary, Alberta
-                and savor the flavours of the week!
+                Don't miss out on these delicious joys - stop by The Chaat Bar
+                and Parontha Place in NE Calgary, Alberta. Relish the flavors of
+                the week!
               </p>
             </div>
             <div className={styles.menuCards_wrap}>

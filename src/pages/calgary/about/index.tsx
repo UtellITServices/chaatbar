@@ -11,12 +11,12 @@ export default function About() {
     <PageLayout>
       <Head>
         <title>
-          About Best Samosa Chaat Restaurant | Fast Food Calgary | Amritsari
-          Kulcha Chestermere{" "}
+          About Best Samosa Chaat Restaurant | Fast Food Calgary | Top Amritsari
+          Kulcha
         </title>
         <meta
           name="description"
-          content="Learn about Chaat Bar featuring the best Amritsari Kulcha in Chestermere and authentic samosa chaat NE Calgary! Everything about best fast-food restaurant in NE Calgary & Chestermere!"
+          content="Learn about Chaat Bar featuring the best Amritsari Kulcha and authentic samosa chaat in NE Calgary! Everything about the best fast-food restaurant in NE Calgary!"
         />
       </Head>
 
@@ -26,8 +26,8 @@ export default function About() {
           <div className={styles.order}>
             <h2>Discover Our Story</h2>
             <h5>
-              Embracing the Essence of Samosa Chat and Best Indian Fast Food in
-              Chestermere and NE Calgary
+              Celebrating the Spirit of Samosa Chat and Best Indian Fast Food in
+              Northeast Calgary
             </h5>
           </div>
         </Container>
@@ -40,26 +40,25 @@ export default function About() {
                 <h5>Welcome</h5>
                 <h3>Who We Are</h3>
                 <h4>
-                  A Celebration of Indian Street Food and Canadian Culinary
-                  Traditions
+                  Blending Indian Street Food Heritage with Canadian Culinary
+                  Charm
                 </h4>
                 <div className={styles.description}>
                   <p>
-                    Chaat Bar is an experienced culinary team driven by a
-                    passion for bringing the unique flavors of Indian street
-                    dishes to the lively streets of Chestermere and NE Calgary.
-                    With our deep love for street food like samosa chaat and
-                    Amritsari kulcha and a commitment to authenticity, we have
-                    meticulously crafted a menu that showcases the diverse
-                    culinary traditions found in India’s vibrant street fast
-                    food scene.
+                    Chaat Bar is a dedicated culinary team fueled by a passion
+                    for bringing the unique flavors of Indian street dishes to
+                    the lively streets of NE Calgary. With our deep love for
+                    iconic dishes like samosa chaat and Amritsari kulcha and a
+                    commitment to authenticity, we have meticulously crafted a
+                    menu that showcases the diverse culinary traditions found in
+                    India’s vibrant street fast food scene.
                   </p>
                   <p>
-                    With our desi dishes, we transport you to the bustling
-                    streets of Mumbai, Kolkata, and Delhi. Streets, where the
-                    tantalizing aroma of spices fills the air and every bite is
-                    a symphony of flavors. Experience the magic of Indian street
-                    food right here in NE Calgary with Chaat Bar.
+                    With our desi dishes, we whisk you away to the bustling
+                    streets of Mumbai, Kolkata, and Delhi. Streets… Streets
+                    where the enticing aroma of spices fills the air and every
+                    bite offers a melody of bold savors. Experience the magic of
+                    Indian street food right here in NE Calgary with Chaat Bar.
                   </p>
                 </div>
                 {/* <Link className={styles.main_btn} href={""}>
@@ -100,12 +99,12 @@ export default function About() {
                   <div className={styles.cuisinR}>
                     <h5>OUR MISSION</h5>
                     <p className="">
-                      To delight food lovers in YYC with the authentic and
-                      vibrant flavors of the best Indian street fast food. Grill
-                      and Chow serve up a culinary experience that captures the
-                      essence of the bustling streets of India. Whether you’re
-                      looking for the samosa chaat in Chestermere or Amritsari
-                      Kulcha in NE Calgary, we’ve got something for everyone!
+                      To delight food lovers in YYC with the genuine and vibrant
+                      tastes of the best Indian street fast food. Grill and Chow
+                      serve up a culinary experience that captures the essence
+                      of the bustling streets of India. Whether you’re looking
+                      for the samosa chaat or Amritsari Kulcha in NE Calgary,
+                      we’ve got something to satisfy every craving!
                     </p>
                   </div>
                 </Col>
@@ -127,12 +126,11 @@ export default function About() {
               <div className={styles.restA}>
                 <h5>OUR VISION</h5>
                 <p>
-                  As a leading Indian restaurant in Chestermere, Chaat Bar aims
-                  to become the go-to destination for those craving authentic
-                  street food including the best Amritsari Kulcha in Calgary. We
-                  strive to create a vibrant and immersive dining experience
-                  that leaves a lasting impression, making every visit
-                  WOW-worthy!
+                  As a leading Indian restaurant, Chaat Bar aims to become the
+                  go-to destination for those craving authentic street food
+                  including the best Amritsari Kulcha in Calgary. We strive to
+                  offer a vivid and immersive dining experience that leaves a
+                  lasting impression, making every visit WOW-worthy!
                 </p>
                 <p></p>
               </div>
@@ -155,10 +153,10 @@ export default function About() {
               <div className={styles.restA}>
                 <h5>Contact Best Fast Food Restaurant Calgary</h5>
                 <p className={styles.weighted}>
-                  Ready to embark on a gourmet journey? Contact us to reserve a
+                  Eager to embark on a gourmet journey? Contact us to reserve a
                   table, inquire about our catering services, or simply share
-                  your thoughts. From the best fast food in Calgary to
-                  traditional street favorites, we’re waiting to hear from you!
+                  your thoughts. From the best fast food in Calgary to beloved
+                  street food classics, we’re waiting to hear from you!
                 </p>
               </div>
             </Col>

@@ -108,11 +108,11 @@ const Franchise = () => {
       <Head>
         <title>
           Buy Best Fast Food Franchise Calgary | Amritsari Kulcha and Samosa
-          Chaat Point Chestermere
+          Chaat Point
         </title>
         <meta
           name="description"
-          content="Everything about buying best fast food restaurant franchise in Chemstere and NE Calgary! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Calgary."
+          content="Everything about buying the best fast food restaurant franchise in NE Calgary! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Calgary."
         />
       </Head>
 
@@ -124,14 +124,15 @@ const Franchise = () => {
           <Container>
             <div className={styles.content_wrapper}>
               <h1>
-                Purchase Chaat Bar Franchise - Best Fast Food Point Calgary
+                Own a Chaat Bar Franchise - Best Fast Food Point Calgary
+                Experience
               </h1>
               <p>
-                Turn your passion for great food into a thriving business by
-                becoming part of the Chaat Bar family. Whether you want to offer
-                the best Amritsari kulcha or authentic samosa chaat in
-                Chestermere or in NE Calgary, we’ll allow you to bring a taste
-                of Indian streets to your local streets!
+                Turn your passion for great food into a profitable venture by
+                joining the Chaat Bar family. Want to offer the best Amritsari
+                kulcha? How about delicious samosa chaat that makes people in
+                your area say OO LA LA? Either way, we’ll help you bring the
+                spirit of India to your local streets!
               </p>
             </div>
           </Container>

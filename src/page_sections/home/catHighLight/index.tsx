@@ -14,6 +14,8 @@ interface IProps {
 }
 
 const AnimationSection: FC<IProps> = ({ children, image }) => {
+  // const router = useRouter();
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.8,
@@ -27,6 +29,8 @@ const AnimationSection: FC<IProps> = ({ children, image }) => {
       contentControl.start({ opacity: 1 });
     }
   }, [inView]);
+
+  // const is_calgary = router.pathname.startsWith("/calgary");
 
   return (
     <div className={styles.wrapper} ref={ref}>
@@ -59,10 +63,10 @@ const CatHighlight = () => {
             <h2>Garden of Flavors</h2>
             <h3>Vegetarian Delights, a celebration of taste</h3>
             <p>
-              Menu at Chaat Bhar Bar - top Indian restaurant in Chestermere and
-              NE Calgary region - showcases the vibrant diversity of Indian
-              cuisine, featuring a rich selection of vegetarian delights that
-              will tantalize your palate.
+              Menu at Chaat Bhar Bar - top Indian restaurant in NE Calgary
+              region - showcases the vibrant diversity of Indian cuisine,
+              featuring a rich selection of vegetarian delights that will
+              tantalize your palate.
             </p>
           </AnimationSection>
           <AnimationSection image="/images/Untitled-design-7.jpg">
@@ -81,8 +85,8 @@ const CatHighlight = () => {
             <p>
               Experience the thrill of authentic Indian spices in every bite.
               Unique tastes in every dish served with culinary love and
-              immaculate hospitality at an Indian street food restaurant in
-              Chestermere and NE Calgary.
+              immaculate hospitality at an Indian street food restaurant in NE
+              Calgary.
             </p>
           </AnimationSection>
         </div>

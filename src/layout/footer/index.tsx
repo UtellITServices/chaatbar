@@ -38,10 +38,11 @@ function Footer({ title, description }: IProps) {
                 description
               ) : (
                 <>
-                  Ready to bring the Chaat Bar experience - best samosa chaat
+                  Excited to bring the Chaat Bar experience - best samosa chaat
                   and Amritsari kulcha restaurant - to your community? Get in
-                  touch today, and let's explore the possibilities of you being
-                  a part of the ever-expanding Chaat Bar Franchise Family!
+                  touch today! Let's have a discussion where we explore the
+                  possibilities of you being a part of the ever-expanding Chaat
+                  Bar Franchise Family!
                 </>
               )}
             </p>
