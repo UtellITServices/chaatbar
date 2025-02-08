@@ -107,12 +107,12 @@ const Franchise = () => {
     <PageLayout>
       <Head>
         <title>
-          Buy Best Fast Food Franchise Calgary | Amritsari Kulcha and Samosa
-          Chaat Point Chestermere
+          Buy Best Fast Food Franchise | Amritsari Kulcha and Samosa Chaat Point
+          Chestermere
         </title>
         <meta
           name="description"
-          content="Everything about buying best fast food restaurant franchise in Chemstere and NE Calgary! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Calgary."
+          content="Everything about buying the best fast food restaurant franchise in Chestermere! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Chestermere.  "
         />
       </Head>
 
@@ -124,14 +124,14 @@ const Franchise = () => {
           <Container>
             <div className={styles.content_wrapper}>
               <h1>
-                Purchase Chaat Bar Franchise - Best Fast Food Point Calgary
+                Purchase Chaat Bar Franchise - Best Fast Food Point Chestermere
               </h1>
               <p>
                 Turn your passion for great food into a thriving business by
                 becoming part of the Chaat Bar family. Whether you want to offer
                 the best Amritsari kulcha or authentic samosa chaat in
-                Chestermere or in NE Calgary, we’ll allow you to bring a taste
-                of Indian streets to your local streets!
+                Chestermere, we’ll allow you to bring a taste of Indian streets
+                to your local streets!
               </p>
             </div>
           </Container>
@@ -148,18 +148,17 @@ const Franchise = () => {
                     </h2>
                     <p>
                       Your journey to owning a Chaat Bar franchise starts here!
-                      Begin by filling out the form below, and we'll send a
-                      comprehensive PDF of the franchise application straight to
-                      your mailbox. This document contains everything you need
-                      to know about the Chaat Bar family. For example, our
-                      commitment to serving the best fast food in Chestermere
-                      and NE Calgary and how you can join us.
+                      Begin by completing the form. We'll send you an
+                      information-packed PDF, detailing everything you need to
+                      know about the Chaat Bar family, in your inbox. For
+                      example, our commitment to serving the best fast food in
+                      Chestermere and how you can join us.
                     </p>
                     <p>
                       Once you've completed the application, send it back via
                       email using the address listed above. We're here to assist
                       you in turning your love for good food into a thriving
-                      business. Let's make your dream of owning a successful,
+                      business. Let’s make your dream of owning a successful,
                       vibrant Chaat Bar franchise - where you can offer delights
                       like Amritsari kulcha and samosa - a reality!
                     </p>
@@ -193,10 +192,7 @@ const Franchise = () => {
                         </div>
                       </Col>
                     </Row>
-                    <h4>
-                      Why Join Best Fast Food Franchise in Chestermere and NE
-                      Calgary?
-                    </h4>
+                    <h4>Why Join Best Fast Food Franchise in Chestermere?</h4>
                     <div className={styles.reason_step}>
                       <h6>Proven Business Model</h6>
                       <p>
@@ -223,17 +219,18 @@ const Franchise = () => {
 
                     <p>
                       At Chaat Bar, we are committed to preparing you for
-                      colossal victory in it. Whether you want marketing help,
-                      all-around training, operational support, or anything
-                      else, the attitude and work ethic of our team is aimed at
-                      making your experience as a Chaat Bar franchisee in NE
-                      Calgary smooth and rewarding.
+                      colossal victory in it. Want marketing help? Need
+                      all-around training? How about operational support? Our
+                      team will help you out with everything! The attitude and
+                      work ethic of our members are aimed at making your
+                      experience as a Chaat Bar franchisee in Chestermere smooth
+                      and rewarding.
                     </p>
                     <p>
                       If you’re ready to be part of something unique and
                       impactful, connect with us today to explore the exciting
                       opportunity of owning a Chaat Bar restaurant - best fast
-                      food franchise in Chestermere and NE Calgary!
+                      food franchise in Chestermere!
                     </p>
                   </div>
                 </Col>
@@ -308,8 +305,8 @@ const Franchise = () => {
       </main>
 
       <Footer
-        title="Contact Best Fast Food Restaurant in NE Calgary"
-        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere and NE Calgary? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
+        title="Contact Best Fast Food Restaurant"
+        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
       />
     </PageLayout>
   );

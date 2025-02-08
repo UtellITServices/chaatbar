@@ -281,7 +281,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <CatHighlight />
+        <CatHighlight isCalgary />
 
         <section className={styles.weeklyDelights}>
           <div className={styles.images}>

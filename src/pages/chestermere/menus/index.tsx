@@ -78,12 +78,12 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Fast Food Menu NE Calgary | Amritsari Kulcha Chestermere | Samosa
-          Chaat NE
+          Best Fast Food Menu Canada | Amritsari Kulcha and Samosa Chaat
+          Chestermere
         </title>
         <meta
           name="description"
-          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha in Chestermere and authentic samosa chaat in NE Calgary! A journey of vibrant Indian flavors awaits at the best fast food restaurant in NE Calgary."
+          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic samosa chaat in Chestermere! A journey of vibrant Indian flavors awaits at the best fast food restaurant in Chestermere, CA."
         />
       </Head>
 
@@ -100,16 +100,16 @@ export default function Menus() {
                     Chaat Bar&apos;s
                     <span>
                       Best Delicious
-                      <br /> Fast Food Menu Calgary
+                      <br /> Fast Food Menu Chestermere
                     </span>
                   </h2>
                   <p>
                     Do you know what makes Chaat Bar the best fast-food
-                    restaurant in Chestermere and NE Calgary? It’s our menu!
-                    Featuring everything from authentic samosa chaat to the best
-                    Amritsari kulcha in Calgary, it will take you on a
-                    delightful adventure through Canada’s culinary landscape. It
-                    also features regional specialties you’ll love.
+                    restaurant in Chestermere? It’s our menu! Featuring
+                    everything from authentic samosa chaat to the best Amritsari
+                    kulcha in Alberta, our menu is a culinary journey… A journey
+                    that showcases the essence of Indian street food while
+                    celebrating Canada’s multicultural flavors.
                   </p>
                 </div>
               </Col>
@@ -404,7 +404,10 @@ export default function Menus() {
           </Row>
         </Container>
       </section> */}
-      <Footer />
+      <Footer
+        title="Contact Details of Best Fast Food Restaurant Chestermere City"
+        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Get in touch today. Let's discuss how you can become part of the growing Chaat Bar community - best Amritsari kulcha and samosa chaat restaurant!"
+      />
     </PageLayout>
   );
 }

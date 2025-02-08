@@ -57,7 +57,7 @@ const GetInTouch = () => {
           </p>
         ) : (
           <p>
-            Have a question, feedback, or just want to say hello? We'd love to
+            Have a question, feedback, or just want to say hello? We’d love to
             hear from you! Fill out the form below and the friendly team at the
             best Indian restaurant in Chestermere, Alberta will get back to you
             as soon as possible.

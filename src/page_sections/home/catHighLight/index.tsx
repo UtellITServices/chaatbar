@@ -8,12 +8,12 @@ import { Container } from "react-bootstrap";
 import { useInView } from "react-intersection-observer";
 import styles from "./style.module.scss";
 
-interface IProps {
+interface IAnimProps {
   image: string;
   children: React.ReactNode;
 }
 
-const AnimationSection: FC<IProps> = ({ children, image }) => {
+const AnimationSection: FC<IAnimProps> = ({ children, image }) => {
   // const router = useRouter();
 
   const [ref, inView] = useInView({
@@ -54,7 +54,11 @@ const AnimationSection: FC<IProps> = ({ children, image }) => {
   );
 };
 
-const CatHighlight = () => {
+interface IProps {
+  isCalgary?: boolean;
+}
+
+const CatHighlight: FC<IProps> = ({ isCalgary }) => {
   return (
     <section className={styles.hmMenu}>
       <Container>
@@ -62,12 +66,21 @@ const CatHighlight = () => {
           <AnimationSection image="/images/Untitled-design-6.jpg">
             <h2>Garden of Flavors</h2>
             <h3>Vegetarian Delights, a celebration of taste</h3>
-            <p>
-              Menu at Chaat Bhar Bar - top Indian restaurant in NE Calgary
-              region - showcases the vibrant diversity of Indian cuisine,
-              featuring a rich selection of vegetarian delights that will
-              tantalize your palate.
-            </p>
+            {isCalgary ? (
+              <p>
+                Menu at Chaat Bhar Bar - top Indian restaurant in NE Calgary
+                region - showcases the vibrant diversity of Indian cuisine,
+                featuring a rich selection of vegetarian delights that will
+                tantalize your palate.
+              </p>
+            ) : (
+              <p>
+                Menu at Chaat Bhar Bar - top Indian restaurant in Chestermere -
+                showcases the vibrant diversity of Indian cuisine, featuring a
+                rich selection of vegetarian delights that will tantalize your
+                palate.
+              </p>
+            )}
           </AnimationSection>
           <AnimationSection image="/images/Untitled-design-7.jpg">
             <div className={styles.content}>
@@ -85,8 +98,8 @@ const CatHighlight = () => {
             <p>
               Experience the thrill of authentic Indian spices in every bite.
               Unique tastes in every dish served with culinary love and
-              immaculate hospitality at an Indian street food restaurant in NE
-              Calgary.
+              immaculate hospitality at an Indian street food restaurant in
+              Chestermere.
             </p>
           </AnimationSection>
         </div>
