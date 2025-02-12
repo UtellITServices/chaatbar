@@ -63,7 +63,13 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
     <section className={styles.hmMenu}>
       <Container>
         <div className={styles.hhMenu_inner}>
-          <AnimationSection image="/images/Untitled-design-6.jpg">
+          <AnimationSection
+            image={
+              isCalgary
+                ? "/images/Untitled-design-6.jpg"
+                : "/images/home/flavours.jpg"
+            }
+          >
             <h2>Garden of Flavors</h2>
             <h3>Vegetarian Delights, a celebration of taste</h3>
             {isCalgary ? (
@@ -82,7 +88,13 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
               </p>
             )}
           </AnimationSection>
-          <AnimationSection image="/images/Untitled-design-7.jpg">
+          <AnimationSection
+            image={
+              isCalgary
+                ? "/images/Untitled-design-7.jpg"
+                : "/images/home/sweets.jpg"
+            }
+          >
             <div className={styles.content}>
               <h2>Irresistible Sweet Treats</h2>
               <h3>Sweet Treats for Your Mouth Only</h3>
@@ -92,7 +104,11 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
               </p>
             </div>
           </AnimationSection>
-          <AnimationSection image="/images/Fast-Food-3.jpg">
+          <AnimationSection
+            image={
+              isCalgary ? "/images/Fast-Food-3.jpg" : "/images/home/hotFood.jpg"
+            }
+          >
             <h2>Bold and Spicy Delights</h2>
             <h3>Ignite Your Taste Buds with Fiery Foods</h3>
             <p>

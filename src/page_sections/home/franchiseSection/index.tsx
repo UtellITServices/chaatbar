@@ -1,13 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./style.module.scss";
 import { Container } from "react-bootstrap";
 import { ImageBottomWave, ImageTopWave } from "@/assets/svg";
 
-const FranchiseSection = () => {
+interface IProps {
+  bgImagePath?: string;
+}
+const FranchiseSection: FC<IProps> = ({
+  bgImagePath = "/images/home/franchise_bg.jpg",
+}) => {
   return (
     <section
       className={styles.franchise_section}
-      style={{ backgroundImage: "url('/images/home/franchise_bg.jpg')" }}
+      style={{ backgroundImage: `url(${bgImagePath})` }}
     >
       <span className={`${styles.wave} ${styles.wave_top}`}>
         <ImageTopWave />

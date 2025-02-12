@@ -119,7 +119,7 @@ const Franchise = () => {
       <main className={styles.main}>
         <section
           className={styles.banner}
-          style={{ backgroundImage: "url(/images/menus/banner2.png)" }}
+          style={{ backgroundImage: "url(/images/franchise/banner.jpg)" }}
         >
           <Container>
             <div className={styles.content_wrapper}>

@@ -6,7 +6,6 @@ import PageLayout from "@/layout/pageLayout";
 import CatHighlight from "@/page_sections/home/catHighLight";
 import FranchiseSection from "@/page_sections/home/franchiseSection";
 import GetInTouch from "@/page_sections/home/getTouch";
-import styles from "@/styles/Home.module.scss";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
@@ -17,6 +16,7 @@ import { IoMdStar } from "react-icons/io";
 import { TfiQuoteLeft, TfiQuoteRight } from "react-icons/tfi";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./Home.module.scss";
 
 const brand_slides = [
   {
@@ -121,14 +121,14 @@ export default function Home() {
             >
               <SwiperSlide>
                 <video autoPlay loop muted>
-                  <source src="/video/banner_video1.mp4" type="video/mp4" />
+                  <source src="/video/chestermereBanner.mp4" type="video/mp4" />
                 </video>
               </SwiperSlide>
               <SwiperSlide>
-                <NextImage src="/images/Untitled-design-7.jpg" alt="" />
+                <NextImage src="/images/home/chestBanner2.jpg" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <NextImage src="/images/Untitled-design-6.jpg" alt="" />
+                <NextImage src="/images/home/chestBanner3.jpg" alt="" />
               </SwiperSlide>
             </Swiper>
             <div style={{ maxHeight: "100%" }}></div>
@@ -145,9 +145,9 @@ export default function Home() {
                   Indian street food.
                 </h4>
               </div>
-              <div className={styles.image}>
+              {/* <div className={styles.image}>
                 <img src="/images/banner/banner1.png" alt="banner" />
-              </div>
+              </div> */}
             </div>
             <div className={styles.arrows}>
               <span
@@ -166,6 +166,112 @@ export default function Home() {
           </Container>
         </section>
         {/* ---------- banner end ---------------- */}
+
+        <section className={styles.weeklyDelights}>
+          <div className={styles.images}>
+            <NextImage
+              className={styles.imageOne}
+              src="/images/image-1.png"
+              alt=""
+            />
+            <NextImage
+              className={styles.imageTwo}
+              src="/images/image-2.png"
+              alt=""
+            />
+            <NextImage
+              className={styles.imageThree}
+              src="/images/image-2.png"
+              alt=""
+            />
+            <NextImage
+              className={styles.imageFour}
+              src="/images/image-1.png"
+              alt=""
+            />
+            {/* <NextImage
+              className={styles.imageThree}
+              src="/images/image-3.png"
+              alt=""
+            /> */}
+            {/* <NextImage
+              className={styles.imageFour}
+              src="/images/image-3.png"
+              alt=""
+            /> */}
+          </div>
+          <Container className={styles.container}>
+            <div className={styles.head}>
+              <h2>Weekly Delights</h2>
+              <h3>Discover Our Limited-Time Specials</h3>
+              <p>
+                Every week or so, we will bring you an array of exciting
+                limited-time specials from Indian streets. These best,
+                irresistible creations at our Chestermere location will surprise
+                your taste buds and keep you coming back for more. From creative
+                spins on classic street dishes to seasonal surprises, our
+                culinary team is constantly pushing the boundaries to offer you
+                a unique dining experience.
+              </p>
+              <p>
+                Don’t miss out on these delicious delights – stop by The Chaat
+                Bar and Parontha Place in Chestermere, Alberta and savor the
+                flavors of the week!
+              </p>
+            </div>
+            <div className={styles.menuCards_wrap}>
+              <Row className={styles.row}>
+                {menu_categories?.map((item, index) => (
+                  <Col xl={3} lg={4} md={6} key={index}>
+                    <div className={styles.cat_card}>
+                      <div className={styles.image}>
+                        <NextImage src={item?.image} alt="" />
+                      </div>
+                      <div className={styles.content}>
+                        <h5>{item?.title}</h5>
+                      </div>
+                    </div>
+                  </Col>
+                ))}
+                <Col xl={3} lg={4} md={6}>
+                  <div className={styles.see_all}>
+                    <div
+                      className={styles.see_btn}
+                      onClick={() => router.push("/chestermere/menus")}
+                    >
+                      <span className={styles.icon}>
+                        <FaArrowRight />
+                      </span>
+                      <h6>See all</h6>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+            {/* <div className={styles.menu}>
+              {MENU_LIST.filter((item) => item.id).map((item, index) => (
+                <div key={index} className={styles.menuItem}>
+                  <div className={styles.image}>
+                    <NextImage src={item.image} alt="" />
+                  </div>
+                  <div className={styles.content}>
+                    <div className={styles.title}>
+                      <h2>{item.name}</h2>
+                      <div className={styles.rating}>
+                        <IoMdStar />
+                        <IoMdStar />
+                        <IoMdStar />
+                        <IoMdStar />
+                        <IoMdStar />
+                      </div>
+                    </div>
+                    <h4>{item.price}</h4>
+                  </div>
+                </div>
+              ))}
+            </div> */}
+          </Container>
+        </section>
 
         <section className={styles.mus}>
           <Container>
@@ -284,112 +390,6 @@ export default function Home() {
 
         <CatHighlight />
 
-        <section className={styles.weeklyDelights}>
-          <div className={styles.images}>
-            <NextImage
-              className={styles.imageOne}
-              src="/images/image-1.png"
-              alt=""
-            />
-            <NextImage
-              className={styles.imageTwo}
-              src="/images/image-2.png"
-              alt=""
-            />
-            <NextImage
-              className={styles.imageThree}
-              src="/images/image-2.png"
-              alt=""
-            />
-            <NextImage
-              className={styles.imageFour}
-              src="/images/image-1.png"
-              alt=""
-            />
-            {/* <NextImage
-              className={styles.imageThree}
-              src="/images/image-3.png"
-              alt=""
-            /> */}
-            {/* <NextImage
-              className={styles.imageFour}
-              src="/images/image-3.png"
-              alt=""
-            /> */}
-          </div>
-          <Container className={styles.container}>
-            <div className={styles.head}>
-              <h2>Weekly Delights</h2>
-              <h3>Discover Our Limited-Time Specials</h3>
-              <p>
-                Every week or so, we will bring you an array of exciting
-                limited-time specials from Indian streets. These best,
-                irresistible creations at our Chestermere location will surprise
-                your taste buds and keep you coming back for more. From creative
-                spins on classic street dishes to seasonal surprises, our
-                culinary team is constantly pushing the boundaries to offer you
-                a unique dining experience.
-              </p>
-              <p>
-                Don’t miss out on these delicious delights – stop by The Chaat
-                Bar and Parontha Place in Chestermere, Alberta and savor the
-                flavors of the week!
-              </p>
-            </div>
-            <div className={styles.menuCards_wrap}>
-              <Row className={styles.row}>
-                {menu_categories?.map((item, index) => (
-                  <Col xl={3} lg={4} md={6} key={index}>
-                    <div className={styles.cat_card}>
-                      <div className={styles.image}>
-                        <NextImage src={item?.image} alt="" />
-                      </div>
-                      <div className={styles.content}>
-                        <h5>{item?.title}</h5>
-                      </div>
-                    </div>
-                  </Col>
-                ))}
-                <Col xl={3} lg={4} md={6}>
-                  <div className={styles.see_all}>
-                    <div
-                      className={styles.see_btn}
-                      onClick={() => router.push("/chestermere/menus")}
-                    >
-                      <span className={styles.icon}>
-                        <FaArrowRight />
-                      </span>
-                      <h6>See all</h6>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-            {/* <div className={styles.menu}>
-              {MENU_LIST.filter((item) => item.id).map((item, index) => (
-                <div key={index} className={styles.menuItem}>
-                  <div className={styles.image}>
-                    <NextImage src={item.image} alt="" />
-                  </div>
-                  <div className={styles.content}>
-                    <div className={styles.title}>
-                      <h2>{item.name}</h2>
-                      <div className={styles.rating}>
-                        <IoMdStar />
-                        <IoMdStar />
-                        <IoMdStar />
-                        <IoMdStar />
-                        <IoMdStar />
-                      </div>
-                    </div>
-                    <h4>{item.price}</h4>
-                  </div>
-                </div>
-              ))}
-            </div> */}
-          </Container>
-        </section>
-
         <section className={styles.reviews_slider}>
           <Container>
             <h2>
@@ -470,7 +470,7 @@ export default function Home() {
         </section>
 
         <GetInTouch />
-        <FranchiseSection />
+        <FranchiseSection bgImagePath="/images/home/join.jpg" />
 
         <section className={styles.brand_slider}>
           <Container>

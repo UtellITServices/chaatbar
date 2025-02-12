@@ -6,7 +6,6 @@ import PageLayout from "@/layout/pageLayout";
 import CatHighlight from "@/page_sections/home/catHighLight";
 import FranchiseSection from "@/page_sections/home/franchiseSection";
 import GetInTouch from "@/page_sections/home/getTouch";
-import styles from "@/styles/Home.module.scss";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
@@ -17,6 +16,7 @@ import { IoMdStar } from "react-icons/io";
 import { TfiQuoteLeft, TfiQuoteRight } from "react-icons/tfi";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./Home.module.scss";
 
 const brand_slides = [
   {

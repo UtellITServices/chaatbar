@@ -90,11 +90,11 @@ export default function Menus() {
       <main className={styles.main}>
         <section
           className={styles.banner}
-          style={{ backgroundImage: "url(/images/menus/banner2.png)" }}
+          style={{ backgroundImage: "url(/images/menus/menu_banner.jpg)" }}
         >
           <Container>
             <Row className={styles.row}>
-              <Col xl={5} md={6}>
+              <Col md={7}>
                 <div className={styles.content_wrapper}>
                   <h2>
                     Chaat Bar&apos;s
@@ -264,7 +264,7 @@ export default function Menus() {
         </section>
         <section
           className={styles.bg_footer}
-          style={{ backgroundImage: "url(/images/menus/banner2.png)" }}
+          style={{ backgroundImage: "url(/images/menus/menu_banner.jpg)" }}
         ></section>
       </main>
       {/* <section className={styles.main}>
