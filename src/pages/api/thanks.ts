@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
     const info = await transporter.sendMail({
       from: process.env.NEXT_PUBLIC_SMTP_USER,
-      to: process.env.NEXT_PUBLIC_SMTP_USER,
+      to: body?.email,
       replyTo: "franchise@thechaatbar.ca",
       subject: `New Message from ${body?.name || ""}`,
       text: body?.message || body?.name || "",
