@@ -1,0 +1,53 @@
+.commingSoon {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commingSoon .container {
+  height: 100%;
+}
+.commingSoon .wrapper {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  padding: 70px 0px;
+}
+.commingSoon .wrapper .logo {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.commingSoon .wrapper .logo img {
+  width: 100%;
+}
+.commingSoon .wrapper h2 {
+  font-weight: 900;
+  font-size: 38px;
+  color: #368619;
+  margin-bottom: -30px;
+  position: relative;
+  font-family: system-ui;
+  font-style: italic;
+}
+.commingSoon .wrapper .comminImage {
+  max-width: 350px;
+  animation-name: change;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes change {
+  from {
+    filter: drop-shadow(2px 4px 15px #a5691d);
+  }
+  to {
+    filter: drop-shadow(2px 4px 15px #368619);
+  }
+}
+.commingSoon .wrapper p {
+  color: #a5a2a2;
+  font-size: 18px;
+  font-weight: 700;
+}/*# sourceMappingURL=CommingSoon.module.css.map */
