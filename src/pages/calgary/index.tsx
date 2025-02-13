@@ -47,19 +47,19 @@ const brand_slides = [
 const menu_categories = [
   {
     title: "Our Culinary Offerings",
-    image: "/images/Untitled-design-8.jpg",
+    image: "/images/home/delight1.jpg",
   },
   {
     title: "Street Food Extravaganza",
-    image: "/images/GOBI-MANCHURIAN.jpg",
+    image: "/images/home/delight2.jpg",
   },
   {
     title: "Flavorful Delights",
-    image: "/images/food-sold-streets.jpg",
+    image: "/images/home/delight3.jpg",
   },
   {
     title: "Bursting With Bold Flavors",
-    image: "/images/Untitled-design-8.jpg",
+    image: "/images/home/delight4.jpg",
   },
   // {
   //   title: "A Fusion of Taste and Tradition",
@@ -125,10 +125,10 @@ export default function Home() {
                 </video>
               </SwiperSlide>
               <SwiperSlide>
-                <NextImage src="/images/Untitled-design-7.jpg" alt="" />
+                <NextImage src="/images/home/calgaryBanner1.jpg" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <NextImage src="/images/Untitled-design-6.jpg" alt="" />
+                <NextImage src="/images/home/calgaryBanner2.jpg" alt="" />
               </SwiperSlide>
             </Swiper>
             <div style={{ maxHeight: "100%" }}></div>

@@ -110,10 +110,7 @@ export default function Contact() {
           </div>
           <div className={styles.wrapper}>
             <div className={styles.image_box}>
-              <NextImage
-                src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151431701.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
-                alt={""}
-              />
+              <NextImage src="/images/contact/contact.jpg" alt={""} />
 
               <div className={styles.social}>
                 <h5>Follow us on</h5>

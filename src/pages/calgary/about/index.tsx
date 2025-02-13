@@ -69,12 +69,12 @@ export default function About() {
             <Col xl={6}>
               <div className={styles.abRight}>
                 <NextImage
-                  src="https://img.freepik.com/premium-photo/thanksgiving-decorations_1278144-17623.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                  src="/images/about/about5.avif"
                   className={styles.abRL}
                   alt=""
                 />
                 <NextImage
-                  src="https://img.freepik.com/premium-photo/closeup-mutton-chicken-tikka-skewers-white-plate_487509-937.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                  src="/images/about/about6.avif"
                   className={styles.abRR}
                   alt=""
                 />
@@ -89,7 +89,7 @@ export default function About() {
             <Row className={styles.row}>
               <Col xl={5}>
                 <NextImage
-                  src="https://img.freepik.com/free-photo/life-style_1122-1996.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                  src="/images/food/food3.jpg"
                   className={styles.cuisinLImg}
                   alt="chefimg"
                 />
@@ -136,18 +136,12 @@ export default function About() {
               </div>
             </Col>
             <Col lg={6}>
-              <NextImage
-                src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141350.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
-                alt=""
-              />
+              <NextImage src="/images/staff/staff2.jpg" alt="" />
             </Col>
           </Row>
           <Row className={styles.row}>
             <Col lg={6}>
-              <NextImage
-                src="https://img.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
-                alt=""
-              />
+              <NextImage src="/images/food/food2.jpg" alt="" />
             </Col>
             <Col lg={6}>
               <div className={styles.restA}>
@@ -168,17 +162,17 @@ export default function About() {
           <div className={styles.join}>
             <div className={styles.Images}>
               <NextImage
-                src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151431710.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/about/about4.jpg"
                 className={styles.join1}
                 alt=""
               />
               <NextImage
-                src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151246080.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/about/about2.jpg"
                 className={styles.join2}
                 alt=""
               />
               <NextImage
-                src="https://img.freepik.com/free-photo/high-angle-indian-food-assortment_23-2148747704.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/about/about3.jpg"
                 className={styles.join3}
                 alt=""
               />

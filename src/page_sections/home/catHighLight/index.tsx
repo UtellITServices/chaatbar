@@ -66,7 +66,7 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
           <AnimationSection
             image={
               isCalgary
-                ? "/images/Untitled-design-6.jpg"
+                ? "/images/home/calgaryFlavour.jpg"
                 : "/images/home/flavours.jpg"
             }
           >
@@ -91,7 +91,7 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
           <AnimationSection
             image={
               isCalgary
-                ? "/images/Untitled-design-7.jpg"
+                ? "/images/home/sweetsCalgary.jpg"
                 : "/images/home/sweets.jpg"
             }
           >
@@ -106,7 +106,9 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
           </AnimationSection>
           <AnimationSection
             image={
-              isCalgary ? "/images/Fast-Food-3.jpg" : "/images/home/hotFood.jpg"
+              isCalgary
+                ? "/images/home/fieryFood.jpg"
+                : "/images/home/hotFood.jpg"
             }
           >
             <h2>Bold and Spicy Delights</h2>
