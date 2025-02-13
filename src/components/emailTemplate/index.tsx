@@ -17,104 +17,54 @@ export const emailTemplateContactUs = (data) => {
 };
 
 export const emailTemplateThanks = (data) => {
-  return `<body>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    .wrapper {
-      max-width: 450px;
-      margin: 0 auto;
-    }
-    .heading {
-      margin: 0;
-      text-align: center;
-    }
-    .content {
-      padding: 1.5rem 1rem;
-    }
-    .content p {
-      margin: 0 0 14px;
-      text-align: center;
-    }
-  </style>
-  <div class="wrapper">
-    <h2 class="heading">Thank You for Reaching Out!</h2>
-    <div class="content">
-      <p>Dear <b>${data?.name}</b></p>
-      <p>
+  return `<body style="box-sizing: border-box; margin: 0; padding: 0;">
+  <div style="max-width: 450px; margin: 0 auto; font-family: Arial, sans-serif;">
+    <h2 style="margin: 0; text-align: center;">Thank You for Reaching Out!</h2>
+    <div style="padding: 1.5rem 1rem;">
+      <p style="margin: 0 0 14px; text-align: center;">Dear <b>${data?.name}</b></p>
+      <p style="margin: 0 0 14px; text-align: center;">
         We appreciate you taking the time to contact us. A member of our team
         will review your inquiry and get back to you as soon as possible.
       </p>
-      <p>
+      <p style="margin: 0 0 14px; text-align: center;">
         In the meantime, please feel free to explore our resources or reach
         out with any further questions.
       </p>
-      <p>Best regards,</p>
-      <p>The ChaatBar</p>
+      <p style="margin: 0 0 14px; text-align: center;">Best regards,</p>
+      <p style="margin: 0; text-align: center;">The ChaatBar</p>
     </div>
   </div>
 </body>`;
 };
 
 export const emailTemplateFranchise = (data) => {
-  return `<body>
-      <style>
-        * {
-          box-sizing: border-box;
-        }
-        .wrapper {
-          max-width: 500px;
-          margin: 2rem auto;
-          border: 1px solid #ccc;
-        }
-        .heading {
-          margin: 0;
-          padding: 1rem;
-          text-align: center;
-          background-color: #378805;
-          color: #fff;
-        }
-        .content {
-          padding: 1.5rem 1rem;
-        }
-        .content p {
-          margin: 0 0 14px;
-        }
-        .footer {
-          background-color: #2a2a2a;
-          padding: 1rem;
-          text-align: center;
-          color: #fff;
-          font-size: 1rem;
-          font-weight: 700;
-        }
-      </style>
-      <div class="wrapper">
-        <h2 class="heading">The ChaatBar Franchise Application</h2>
-        <div class="content">
-          <p>Dear <b>${data?.name}</b></p>
-          <p>
+  return `<body style="box-sizing: border-box; margin: 0; padding: 0;">
+      <div style="max-width: 500px; margin: 2rem auto; border: 1px solid #ccc; font-family: Arial, sans-serif;">
+        <h2 style="margin: 0; padding: 1rem; text-align: center; background-color: #378805; color: #fff;">
+          The ChaatBar Franchise Application
+        </h2>
+        <div style="padding: 1.5rem 1rem;">
+          <p style="margin: 0 0 14px;">Dear <b>${data?.name}</b></p>
+          <p style="margin: 0 0 14px;">
             We are delighted to have you express interest in becoming a part of
             The Chaat Bar family. Below are your details as submitted:
           </p>
-          <p>Name: ${data?.name}</p>
-          <p>Email: ${data?.email}</p>
-          <p>Phone: ${data?.phone_number}</p>
-          <p>Message: ${data?.message}</p>
-          <p>
+          <p style="margin: 0 0 14px;"><b>Name:</b> ${data?.name}</p>
+          <p style="margin: 0 0 14px;"><b>Email:</b> ${data?.email}</p>
+          <p style="margin: 0 0 14px;"><b>Phone:</b> ${data?.phone_number}</p>
+          <p style="margin: 0 0 14px;"><b>Message:</b> ${data?.message}</p>
+          <p style="margin: 0 0 14px;">
             Please find the attached Franchise Application Form. Fill it out at
             your earliest convenience and return it by replying to this email with
             the completed form attached. If you have any questions or need further
             assistance, do not hesitate to reach out to us.
           </p>
-          <p>Warm regards,</p>
-          <p>The Chaat Bar Team</p>
+          <p style="margin: 0 0 14px;">Warm regards,</p>
+          <p style="margin: 0;">The Chaat Bar Team</p>
         </div>
-        <div class="footer">&copy; ${moment().format(
-          "YYYY"
-        )} The ChaatBar, All rights reserved</div>
+        <div style="background-color: #2a2a2a; padding: 1rem; text-align: center; color: #fff; font-size: 1rem; font-weight: 700;">
+          &copy; ${moment().format("YYYY")} The ChaatBar, All rights reserved
+        </div>
       </div>
-  </body>
-  `;
+  </body>`;
 };
