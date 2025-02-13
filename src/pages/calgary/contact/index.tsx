@@ -25,8 +25,32 @@ export default function Contact() {
     validationSchema: contactYupSchema,
     onSubmit: (values) => {
       handleSubmit(values);
+      sendEmail(values);
     },
   });
+
+  const sendEmail = async (values) => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/thanks", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) {
+        toast.error("Something went wrong");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(
+        "There was an error sending your message. Please try again later."
+      );
+    }
+    setLoading(false);
+  };
 
   const handleSubmit = async (values) => {
     if (loading) return;
