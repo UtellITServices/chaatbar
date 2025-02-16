@@ -5,6 +5,7 @@ import { Footer } from "@/layout/footer";
 import PageLayout from "@/layout/pageLayout";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./About.module.scss";
+import clsx from "clsx";
 
 export default function About() {
   return (
@@ -89,26 +90,23 @@ export default function About() {
             <Row className={styles.row}>
               <Col xl={5}>
                 <NextImage
-                  src="https://img.freepik.com/free-photo/life-style_1122-1996.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                  src="/images/about/about7.jpg"
                   className={styles.cuisinLImg}
                   alt="chefimg"
                 />
               </Col>
-              <Col xl={7}>
-                <Col xxl={10}>
-                  <div className={styles.cuisinR}>
-                    <h5>OUR MISSION</h5>
-                    <p className="">
-                      To delight food lovers in YYC with the authentic and
-                      vibrant flavors of the best Indian street fast food. Grill
-                      and Chow serve up a culinary experience that captures the
-                      essence of the bustling streets of India. Craving for the
-                      samosa chaat? Want to try something spicy and tasty like
-                      Amritsari Kulcha in Chestermere? We’ve got something for
-                      everyone!
-                    </p>
-                  </div>
-                </Col>
+              <Col xl={6}>
+                <div className={styles.cuisinR}>
+                  <h5>OUR MISSION</h5>
+                  <p className="">
+                    To delight food lovers in YYC with the authentic and vibrant
+                    flavors of the best Indian street fast food. Grill and Chow
+                    serve up a culinary experience that captures the essence of
+                    the bustling streets of India. Craving for the samosa chaat?
+                    Want to try something spicy and tasty like Amritsari Kulcha
+                    in Chestermere? We’ve got something for everyone!
+                  </p>
+                </div>
               </Col>
             </Row>
             {/* <div className={styles.cuisin_wrap}>
@@ -122,7 +120,7 @@ export default function About() {
       </section>
       <section className={styles.rest}>
         <Container className={styles.restP}>
-          <Row className={styles.row}>
+          <Row className={clsx(styles.row, "justify-content-end")}>
             <Col lg={6}>
               <div className={styles.restA}>
                 <h5>OUR VISION</h5>
@@ -137,19 +135,13 @@ export default function About() {
                 <p></p>
               </div>
             </Col>
-            <Col lg={6}>
-              <NextImage
-                src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141350.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
-                alt=""
-              />
+            <Col lg={5} className="text-end">
+              <NextImage src="/images/about/about8.jpg" alt="" />
             </Col>
           </Row>
           <Row className={styles.row}>
-            <Col lg={6}>
-              <NextImage
-                src="https://img.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
-                alt=""
-              />
+            <Col lg={5}>
+              <NextImage src="/images/about/about9.jpg" alt="" />
             </Col>
             <Col lg={6}>
               <div className={styles.restA}>
@@ -170,17 +162,17 @@ export default function About() {
           <div className={styles.join}>
             <div className={styles.Images}>
               <NextImage
-                src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151431710.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/about/about10.jpg"
                 className={styles.join1}
                 alt=""
               />
               <NextImage
-                src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151246080.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/about/about11.jpg"
                 className={styles.join2}
                 alt=""
               />
               <NextImage
-                src="https://img.freepik.com/free-photo/high-angle-indian-food-assortment_23-2148747704.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/about/about12.jpg"
                 className={styles.join3}
                 alt=""
               />
@@ -188,13 +180,15 @@ export default function About() {
 
             <div className={styles.joincontent}>
               <div className={styles.joinSet}>
-                <h5>They Did Say:</h5>
+                <h3>They Did Say:</h3>
                 <p>
-                  {`“Food`} is the ingredient that binds us together,
+                  - {`“Food`} is the ingredient that binds us together,
                   transcending borders and cultures, and sparking joy in every{" "}
                   {`bite.”`}
-                  <br />- Kamander Brar, Founder, The Chaat Bar and Parontha
-                  Place Place
+                </p>
+                <p>
+                  - Kamander Brar, Founder, The Chaat Bar and Parontha Place
+                  Place
                 </p>
                 {/* <Link className={styles.main_btn} href={""}>
                   Learn More

@@ -50,16 +50,17 @@
   }
 
   .order {
-    background-color: rgb(255 255 255);
-    padding: 75px 105px;
-    box-shadow: 0 0 15px 0 #ddd;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 2rem;
+    padding: 3rem 4rem;
+    // box-shadow: 0 0 15px 0 #ddd;
     text-align: center;
     max-width: 1040px;
     width: 100%;
     position: absolute;
-    bottom: -180px;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, 0px);
+    transform: translate(-50%, 50%);
 
     @media (max-width: $xl) {
       padding: 50px;
@@ -79,6 +80,7 @@
 
     h2 {
       line-height: 70px;
+      color: #fff;
       padding-bottom: 10px;
 
       @media (max-width: $xl) {
@@ -102,7 +104,6 @@
     h5 {
       color: $secondary;
       line-height: 30px;
-      padding-bottom: 30px;
 
       @media (max-width: $sm) {
         line-height: 22px;
@@ -575,7 +576,7 @@
         max-width: 100%;
       }
 
-      h5 {
+      h3 {
         color: $primary;
       }
 
@@ -588,7 +589,7 @@
       }
 
       p {
-        padding-bottom: 25px;
+        font-size: 16px;
       }
 
       .btn_yellow {

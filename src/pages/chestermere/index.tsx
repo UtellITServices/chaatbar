@@ -8,7 +8,7 @@ import FranchiseSection from "@/page_sections/home/franchiseSection";
 import GetInTouch from "@/page_sections/home/getTouch";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
