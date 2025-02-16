@@ -24,8 +24,8 @@ const FranchiseSection: FC<IProps> = ({
         <div className={styles.content}>
           <h3>Join our Franchise to Grow Business</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            doloribus recusandae.
+            Turn your passion for great food into a profitable venture by
+            joining the Chaat Bar family.
           </p>
           <button className="btn btn-primary">Join Now</button>
         </div>

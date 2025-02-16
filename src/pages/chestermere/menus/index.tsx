@@ -10,7 +10,7 @@ import Head from "next/head";
 import styles from "./menu.module.scss";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase.config";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useStore } from "@/store";
 import { ThreeDots } from "react-loader-spinner";
 
@@ -37,8 +37,13 @@ import { ThreeDots } from "react-loader-spinner";
 // }
 
 export default function Menus() {
+  const sectionRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const { menuList, setMenuList } = useStore((state: any) => state);
+
+  const handleScroll = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   async function getCategoryWithProducts() {
     const categoryCollectionRef = collection(db, "category");
@@ -60,9 +65,11 @@ export default function Menus() {
       }));
       const result = categories.map((category: any) => ({
         ...category,
-        menus: menus.filter((menu: any) => menu.category_id === category.id),
+        menus: menus
+          .filter((menu: any) => menu.category_id === category.id)
+          .reverse(),
       }));
-      setMenuList(result);
+      setMenuList(result.reverse());
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -113,11 +120,6 @@ export default function Menus() {
                   </p>
                 </div>
               </Col>
-              {/* <Col xl={7} md={6}>
-                <div className={styles.image_wrapper}>
-                  <NextImage src="/images/menus/menu_banner.png" alt="" />
-                </div>
-              </Col> */}
             </Row>
           </Container>
         </section>
@@ -174,13 +176,14 @@ export default function Menus() {
         </section>
 
         <section
+          ref={sectionRef}
           className={styles.menu}
           style={{ backgroundImage: 'url("/images/menus/paper_bg.png")' }}
         >
           <Container>
             {loading ? (
-              <div className="d-flex justify-content-center py-5">
-                <ThreeDots width="80" color="var(--primary)" />
+              <div className="d-flex justify-content-center py-5 position-relative z-3">
+                <ThreeDots width="100" color="#378805" />
               </div>
             ) : menuList?.length ? (
               <Tabs>
@@ -191,32 +194,23 @@ export default function Menus() {
                     alt=""
                   />
                   <div className={styles.categories}>
-                    {/* <div className={styles.img}>
-                      <NextImage src="/images/menu-headding.svg" alt="" />
-                    </div> */}
                     <TabList className={styles.name}>
                       {menuList?.map((item) => (
                         <Tab
                           className={styles.item}
                           selectedClassName={styles.active}
                           key={item?.category_id}
+                          onClick={handleScroll}
                         >
                           <span>{item.title}</span>
                         </Tab>
                       ))}
-                      {/* <li className={styles.item}>
-                    <span>SMALLS + SHARING</span>
-                  </li> */}
                     </TabList>
                   </div>
 
                   <div className={styles.sub_categories}>
                     {menuList?.map((item) => (
                       <TabPanel key={item?.category_id}>
-                        {/* <div className={styles.img}>
-                          <NextImage src="/images/image-2.png" alt="" />
-                        </div> */}
-                        {/* <div className={styles.divider}></div> */}
                         <div className={styles.heading}>
                           <h1>{item?.title}</h1>
                           <h3>{item.description}</h3>
@@ -226,19 +220,12 @@ export default function Menus() {
                             key={subItem?.id}
                             className={styles.inner_wrapper}
                           >
-                            {/* <h2>{subItem?.title}</h2> */}
-                            {/* <p>{subItem?.description}</p>
-                            {subItem?.data?.map((listItem, j) => (
-                            ))} */}
                             <div className={styles.list}>
                               <div className={styles.list_wrapper}>
                                 <h3>{subItem?.title}</h3>
                                 <div className={styles.item_divider}></div>
                                 <h4>${subItem?.price}</h4>
                               </div>
-                              {/* {!!subItem?.description && (
-                                <h5>{subItem?.description}</h5>
-                              )} */}
 
                               {subItem?.add_on?.map((addOn, add) => (
                                 <div className={styles.add_on} key={add}>
@@ -267,143 +254,6 @@ export default function Menus() {
           style={{ backgroundImage: "url(/images/menus/menu_banner.jpg)" }}
         ></section>
       </main>
-      {/* <section className={styles.main}>
-        |
-        <Container>
-          <div className={styles.order}>
-            <h2>Menus</h2>
-            <h5>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit ugue quam
-              diam vitae velit bibendum elementum eget non vivamus volutpat odio
-              cras vestibulum purus aliquam.
-            </h5>
-          </div>
-        </Container>
-      </section>
-      <section className={styles.menus}>
-        <Container>
-          <Row className={styles.menuRow}>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish1.png" />
-              <div className={styles.content}>
-                <h4>SMALLS + SHARING</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish2.png" />
-              <div className={styles.content}>
-                <h4>SUSHI</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish3.png" />
-              <div className={styles.content}>
-                <h4>SALADS</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish4.png" />
-              <div className={styles.content}>
-                <h4>SANDWICHES + BURGERS</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish5.png" />
-              <div className={styles.content}>
-                <h4>MAINS</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish6.png" />
-              <div className={styles.content}>
-                <h4>STEAK</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish7.png" />
-              <div className={styles.content}>
-                <h4>SWEETS</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish8.png" />
-              <div className={styles.content}>
-                <h4>SMOOTHIE DRINKS</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-            <Col xl={3} md={4}>
-              <NextImage src="/images/dish9.png" />
-              <div className={styles.content}>
-                <h4>Soft Drinks</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipiscing adipiscing
-                  adipiscing.
-                </p>
-                <h5>
-                  <a href="#">View Menu</a>
-                </h5>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
       <Footer
         title="Contact Details of Best Fast Food Restaurant Chestermere City"
         description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Get in touch today. Let's discuss how you can become part of the growing Chaat Bar community - best Amritsari kulcha and samosa chaat restaurant!"

@@ -69,6 +69,7 @@ const menu_categories = [
 
 export default function Home() {
   const router = useRouter();
+  const totalSlides = 3;
   const brandSliderNext = useRef(null);
   const brandSliderPrev = useRef(null);
 
@@ -86,12 +87,7 @@ export default function Home() {
   // }, [router]);
 
   const [currentSlide, setCurrentSlide] = useState(1);
-  const [totalSlides, setTotalSlides] = useState(0);
 
-  useEffect(() => {
-    // Dynamically set total slides when Swiper is initialized
-    setTotalSlides(document.querySelectorAll(".swiper-slide").length);
-  }, []);
   return (
     <PageLayout>
       <Head>
@@ -206,7 +202,7 @@ export default function Home() {
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
-                        <span>0{currentSlide}</span> / 0{totalSlides}
+                        <span>{currentSlide}</span> / {totalSlides}
                       </div>
                       <h2>Bursting with Authentic Flavors:</h2>
                       <p>
@@ -231,7 +227,7 @@ export default function Home() {
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
-                        <span>0{currentSlide}</span> / 0{totalSlides}
+                        <span>{currentSlide}</span> / {totalSlides}
                       </div>
                       <h2>Sonorous and Colorful Presentations:</h2>
                       <p>
@@ -261,7 +257,7 @@ export default function Home() {
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
-                        <span>0{currentSlide}</span> / 0{totalSlides}
+                        <span>{currentSlide}</span> / {totalSlides}
                       </div>
                       <h2>Innovation Meets Tradition:</h2>
                       <p>

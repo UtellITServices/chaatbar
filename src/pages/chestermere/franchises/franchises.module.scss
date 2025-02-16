@@ -135,6 +135,7 @@
     box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.2);
     padding: 2rem;
     border-radius: 2rem;
+    margin-top: 3rem;
     h3 {
       font-weight: 700;
       text-align: center;
@@ -165,7 +166,7 @@
 }
 
 .step_section {
-  padding: 3rem 0 0;
+  padding: 3rem 0 3rem;
 }
 
 .process_steps {
@@ -183,7 +184,7 @@
   }
   .step {
     flex-shrink: 0;
-    color: $primary;
+    color: $secondary;
     // height: var(--size);
     border-radius: 10px;
     position: relative;
@@ -209,7 +210,7 @@
       height: var(--space);
     }
     &::after {
-      background-color: $primary;
+      background-color: $secondary;
       height: 0;
     }
     &:first-of-type {
@@ -220,8 +221,8 @@
     }
 
     &.active {
-      background-color: $primary;
-      border-color: $primary;
+      background-color: $secondary;
+      border-color: $secondary;
       color: #fff;
       transition: 0.2s linear;
       transition-delay: 0.6s;

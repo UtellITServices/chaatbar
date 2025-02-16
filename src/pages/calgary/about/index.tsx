@@ -5,6 +5,7 @@ import { Footer } from "@/layout/footer";
 import PageLayout from "@/layout/pageLayout";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./About.module.scss";
+import clsx from "clsx";
 
 export default function About() {
   return (
@@ -86,7 +87,7 @@ export default function About() {
       <section className={styles.cuisin}>
         <div className={styles.cuisinA}>
           <Container>
-            <Row className={styles.row}>
+            <Row className={clsx(styles.row)}>
               <Col xl={5}>
                 <NextImage
                   src="/images/food/food3.jpg"
@@ -94,20 +95,18 @@ export default function About() {
                   alt="chefimg"
                 />
               </Col>
-              <Col xl={7}>
-                <Col xxl={10}>
-                  <div className={styles.cuisinR}>
-                    <h5>OUR MISSION</h5>
-                    <p className="">
-                      To delight food lovers in YYC with the genuine and vibrant
-                      tastes of the best Indian street fast food. Grill and Chow
-                      serve up a culinary experience that captures the essence
-                      of the bustling streets of India. Whether you’re looking
-                      for the samosa chaat or Amritsari Kulcha in NE Calgary,
-                      we’ve got something to satisfy every craving!
-                    </p>
-                  </div>
-                </Col>
+              <Col xl={6}>
+                <div className={styles.cuisinR}>
+                  <h5>OUR MISSION</h5>
+                  <p className="">
+                    To delight food lovers in YYC with the genuine and vibrant
+                    tastes of the best Indian street fast food. Grill and Chow
+                    serve up a culinary experience that captures the essence of
+                    the bustling streets of India. Whether you’re looking for
+                    the samosa chaat or Amritsari Kulcha in NE Calgary, we’ve
+                    got something to satisfy every craving!
+                  </p>
+                </div>
               </Col>
             </Row>
             {/* <div className={styles.cuisin_wrap}>
@@ -121,7 +120,7 @@ export default function About() {
       </section>
       <section className={styles.rest}>
         <Container className={styles.restP}>
-          <Row className={styles.row}>
+          <Row className={clsx(styles.row, "justify-content-end")}>
             <Col lg={6}>
               <div className={styles.restA}>
                 <h5>OUR VISION</h5>
@@ -135,12 +134,12 @@ export default function About() {
                 <p></p>
               </div>
             </Col>
-            <Col lg={6}>
+            <Col lg={5} className="text-end">
               <NextImage src="/images/staff/staff2.jpg" alt="" />
             </Col>
           </Row>
           <Row className={styles.row}>
-            <Col lg={6}>
+            <Col lg={5}>
               <NextImage src="/images/food/food2.jpg" alt="" />
             </Col>
             <Col lg={6}>

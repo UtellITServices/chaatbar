@@ -236,6 +236,23 @@ const Franchise = () => {
                 </Col>
                 <Col lg={5}>
                   <div className={styles.right_wrap}>
+                    <div className={styles.step_section}>
+                      <Container>
+                        <div className={styles.process_steps}>
+                          {steps_data.map((item, index) => (
+                            <div
+                              className={`${styles.step} ${
+                                activeStep < index + 1 ? null : styles.active
+                              }`}
+                              key={index}
+                            >
+                              <h5>{index + 1}</h5>
+                              <p>{item.text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </Container>
+                    </div>
                     <div className={styles.form_box}>
                       <h3>Get started with us</h3>
                       <form onSubmit={formik.handleSubmit}>
@@ -277,24 +294,6 @@ const Franchise = () => {
                           </div>
                         </div>
                       </form>
-                    </div>
-
-                    <div className={styles.step_section}>
-                      <Container>
-                        <div className={styles.process_steps}>
-                          {steps_data.map((item, index) => (
-                            <div
-                              className={`${styles.step} ${
-                                activeStep < index + 1 ? null : styles.active
-                              }`}
-                              key={index}
-                            >
-                              <h5>{index + 1}</h5>
-                              <p>{item.text}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </Container>
                     </div>
                   </div>
                 </Col>
