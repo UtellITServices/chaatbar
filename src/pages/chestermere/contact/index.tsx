@@ -82,12 +82,12 @@ export default function Contact() {
     <PageLayout>
       <Head>
         <title>
-          Contact Best Amritsari Kulcha Restaurant Chestermere | Samosa Chaat
-          Fast Food Point
+          Contact Best Paneer Kulcha Restaurant Chestermere | Chaat and Fast
+          Food Point
         </title>
         <meta
           name="description"
-          content="Contact Chaat Bar - best fast food restaurant where guests can enjoy traditional Indian flavors! Give feedback on best Amritsari kulcha and samosa chaat in Chestermere, Alberta. "
+          content="Contact Chaat Bar - best fast food restaurant where guests can enjoy traditional Indian flavors! Give feedback on best Panner kulcha and Burgers in Chestermere, Alberta. "
         />
       </Head>
 
@@ -99,10 +99,10 @@ export default function Contact() {
             </h2>
             <h5>With Top Fast Food Point in Chestermere, Alberta</h5>
             <p>
-              Got questions about our menu featuring the best Amritsari Kulcha
-              or the most authentic samosa chaat Chestermere has to offer? Want
-              to make a reservation or inquire about catering? Fill out the form
-              below, and our friendly team will get back to you promptly!
+              Got questions about our menu featuring the best Paneer Tikka or
+              the most authentic Pakora's Chestermere has to offer? Want to make
+              a reservation or inquire about catering? Fill out the form below,
+              and our friendly team will get back to you promptly!
             </p>
             <p>
               Chaat Bar prides itself on offering a harmonious blend of
@@ -316,7 +316,7 @@ export default function Contact() {
 
       <Footer
         title="Other Ways to Contact Best Fast Food Restaurant Chestermere"
-        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Reach out now and discover how you can become a part of our ever-growing Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
+        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Reach out now and discover how you can become a part of our ever-growing Chaat Bar Franchise Family - the best Pav Bhaji and Black Channa Chaat restaurant!"
       />
     </PageLayout>
   );

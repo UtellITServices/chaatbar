@@ -12,12 +12,12 @@ export default function About() {
     <PageLayout>
       <Head>
         <title>
-          About Best Samosa Chaat Restaurant | Fast Food Point | Amritsari
-          Kulcha Chestermere
+          About Best Saag Makki di Rotti Restaurant | Fast Food Point | Desi
+          Ghee di Choori Chestermere
         </title>
         <meta
           name="description"
-          content="Learn about Chaat Bar featuring the best Amritsari Kulcha and authentic samosa chaat in Chestermere! Everything about the best fast-food restaurant in Chestermere."
+          content="Learn about Chaat Bar featuring the best Saag Makki di Rotti and authentic Desi Ghee di Choori in Chestermere! Everything about the best fast-food restaurant in Chestermere."
         />
       </Head>
 
@@ -27,8 +27,8 @@ export default function About() {
           <div className={styles.order}>
             <h2>Discover Our Story</h2>
             <h5>
-              Embracing the Essence of Samosa Chat and Best Indian Fast Food in
-              Chestermere
+              Embracing the Essence of Saag Makki di Rotti and Best Indian Fast
+              Food in Chestermere
             </h5>
           </div>
         </Container>
@@ -49,7 +49,7 @@ export default function About() {
                     Chaat Bar is an experienced culinary team driven by a
                     passion for bringing the unique flavors of Indian street
                     dishes to the lively streets of Chestermere. With our deep
-                    love for street food like samosa chaat and Amritsari kulcha
+                    love for street food like Paneer Kulcha and Paneer Pakora
                     and a commitment to authenticity, we have meticulously
                     crafted a menu that showcases the diverse culinary
                     traditions found in India’s vibrant street fast food scene.
@@ -102,7 +102,7 @@ export default function About() {
                     To delight food lovers in YYC with the authentic and vibrant
                     flavors of the best Indian street fast food. Grill and Chow
                     serve up a culinary experience that captures the essence of
-                    the bustling streets of India. Craving for the samosa chaat?
+                    the bustling streets of India. Craving for the Fast food?
                     Want to try something spicy and tasty like Amritsari Kulcha
                     in Chestermere? We’ve got something for everyone!
                   </p>
@@ -198,7 +198,7 @@ export default function About() {
           </div>
         </Container>
       </section>
-      <Footer description="Ready to bring the Chaat Bar experience - best samosa chaat and Amritsari kulcha restaurant - to your community? Get in touch today, and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family!" />
+      <Footer description="Ready to bring the Chaat Bar experience - best Prantha and Vada Pav restaurant - to your community? Get in touch today, and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family!" />
     </PageLayout>
   );
 }

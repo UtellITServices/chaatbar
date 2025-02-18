@@ -12,12 +12,11 @@ export default function About() {
     <PageLayout>
       <Head>
         <title>
-          About Best Samosa Chaat Restaurant | Fast Food Calgary | Top Amritsari
-          Kulcha
+          About Best Prantha Restaurant | Fast Food Calgary | Top Desserts
         </title>
         <meta
           name="description"
-          content="Learn about Chaat Bar featuring the best Amritsari Kulcha and authentic samosa chaat in NE Calgary! Everything about the best fast-food restaurant in NE Calgary!"
+          content="Learn about Chaat Bar featuring the best Prantha and authentic Desserts in NE Calgary! Everything about the best fast-food restaurant in NE Calgary!"
         />
       </Head>
 
@@ -49,10 +48,10 @@ export default function About() {
                     Chaat Bar is a dedicated culinary team fueled by a passion
                     for bringing the unique flavors of Indian street dishes to
                     the lively streets of NE Calgary. With our deep love for
-                    iconic dishes like samosa chaat and Amritsari kulcha and a
-                    commitment to authenticity, we have meticulously crafted a
-                    menu that showcases the diverse culinary traditions found in
-                    India’s vibrant street fast food scene.
+                    iconic dishes like Prantha and Pakoda and a commitment to
+                    authenticity, we have meticulously crafted a menu that
+                    showcases the diverse culinary traditions found in India’s
+                    vibrant street fast food scene.
                   </p>
                   <p>
                     With our desi dishes, we whisk you away to the bustling
@@ -103,8 +102,8 @@ export default function About() {
                     tastes of the best Indian street fast food. Grill and Chow
                     serve up a culinary experience that captures the essence of
                     the bustling streets of India. Whether you’re looking for
-                    the samosa chaat or Amritsari Kulcha in NE Calgary, we’ve
-                    got something to satisfy every craving!
+                    the Fast Food in NE Calgary, we’ve got something to satisfy
+                    every craving!
                   </p>
                 </div>
               </Col>

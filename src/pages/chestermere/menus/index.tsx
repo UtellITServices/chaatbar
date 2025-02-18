@@ -85,12 +85,11 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Fast Food Menu Canada | Amritsari Kulcha and Samosa Chaat
-          Chestermere
+          Best Fast Food Menu Canada | Platters | kulcha | Tikka in Chestermere
         </title>
         <meta
           name="description"
-          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic samosa chaat in Chestermere! A journey of vibrant Indian flavors awaits at the best fast food restaurant in Chestermere, CA."
+          content="Explore Chaat Bar's menu featuring the best Platters and authentic Tikka's in Chestermere! A journey of vibrant Indian flavors awaits at the best fast food restaurant in Chestermere, CA."
         />
       </Head>
 
@@ -113,9 +112,9 @@ export default function Menus() {
                   <p>
                     Do you know what makes Chaat Bar the best fast-food
                     restaurant in Chestermere? It’s our menu! Featuring
-                    everything from authentic samosa chaat to the best Amritsari
-                    kulcha in Alberta, our menu is a culinary journey… A journey
-                    that showcases the essence of Indian street food while
+                    everything from authentic Platters to the best Chaat's in
+                    Alberta, our menu is a culinary journey… A journey that
+                    showcases the essence of Indian street food while
                     celebrating Canada’s multicultural flavors.
                   </p>
                 </div>

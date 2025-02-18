@@ -107,12 +107,11 @@ const Franchise = () => {
     <PageLayout>
       <Head>
         <title>
-          Buy Best Fast Food Franchise Calgary | Amritsari Kulcha and Samosa
-          Chaat Point
+          Buy Best Fast Food Franchise Calgary | Panner Tikka and Falooda Point
         </title>
         <meta
           name="description"
-          content="Everything about buying the best fast food restaurant franchise in NE Calgary! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Calgary."
+          content="Everything about buying the best fast food restaurant franchise in NE Calgary! Learn intricate details about owning best Panner Tikka and Falooda branch in Calgary."
         />
       </Head>
 
@@ -129,10 +128,10 @@ const Franchise = () => {
               </h1>
               <p>
                 Turn your passion for great food into a profitable venture by
-                joining the Chaat Bar family. Want to offer the best Amritsari
-                kulcha? How about delicious samosa chaat that makes people in
-                your area say OO LA LA? Either way, we’ll help you bring the
-                spirit of India to your local streets!
+                joining the Chaat Bar family. Want to offer the best Panner
+                Tikka? How about delicious Prantha that makes people in your
+                area say OO LA LA? Either way, we’ll help you bring the spirit
+                of India to your local streets!
               </p>
             </div>
           </Container>
@@ -310,7 +309,7 @@ const Franchise = () => {
 
       <Footer
         title="Contact Best Fast Food Restaurant in NE Calgary"
-        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere and NE Calgary? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
+        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere and NE Calgary? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Panner Tikka and Falooda restaurant!"
       />
     </PageLayout>
   );

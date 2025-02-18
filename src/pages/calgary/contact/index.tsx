@@ -82,12 +82,11 @@ export default function Contact() {
     <PageLayout>
       <Head>
         <title>
-          Contact Best Amritsari Kulcha Restaurant NE Calgary | Samosa Chaat
-          Fast Food Point
+          Contact Best Platters Restaurant NE Calgary | Shakes Point
         </title>
         <meta
           name="description"
-          content="Contact Chaat Bar - best fast food restaurant in NE Calgary where guests can enjoy traditional Indian flavors! Give feedback on best Amritsari kulcha and samosa chaat in Northeast Calgary, Alberta. "
+          content="Contact Chaat Bar - best fast food restaurant in NE Calgary where guests can enjoy traditional Indian flavors! Give feedback on best Platters and Shakes in Northeast Calgary, Alberta. "
         />
       </Head>
 
@@ -97,10 +96,10 @@ export default function Contact() {
             <h2>Get in Touch </h2>
             <h5>Get in Touch With Top Fast Food Point in NE Calgary, Canada</h5>
             <p>
-              Got questions about our menu featuring the best Amritsari Kulcha
-              or most delectable samosa chaat Calgary has to offer? Want to make
-              a reservation or discuss catering options? Fill out the form
-              below, and our friendly team will get back to you promptly!
+              Got questions about our menu featuring the best Platters or most
+              delectable Shakes Calgary has to offer? Want to make a reservation
+              or discuss catering options? Fill out the form below, and our
+              friendly team will get back to you promptly!
             </p>
             <p>
               Chaat Bar is passionate about serving the best fast food in
@@ -310,7 +309,7 @@ export default function Contact() {
 
       <Footer
         title="Additional Ways to Contact Best Fast Food Restaurant NE Calgary"
-        description="Want to introduce the Chaat Bar experience to your area in or around NE Calgary? Get in touch now! Let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
+        description="Want to introduce the Chaat Bar experience to your area in or around NE Calgary? Get in touch now! Let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Platters and Shakes restaurant!"
       />
     </PageLayout>
   );

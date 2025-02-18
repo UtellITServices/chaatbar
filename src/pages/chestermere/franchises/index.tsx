@@ -107,12 +107,12 @@ const Franchise = () => {
     <PageLayout>
       <Head>
         <title>
-          Buy Best Fast Food Franchise | Amritsari Kulcha and Samosa Chaat Point
+          Buy Best Fast Food Franchise | Aloo Gobi Parontha and Tikka Point
           Chestermere
         </title>
         <meta
           name="description"
-          content="Everything about buying the best fast food restaurant franchise in Chestermere! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Chestermere.  "
+          content="Everything about buying the best fast food restaurant franchise in Chestermere! Learn intricate details about owning best Aloo Gobi Parontha and Tikka in Chestermere.  "
         />
       </Head>
 
@@ -129,9 +129,9 @@ const Franchise = () => {
               <p>
                 Turn your passion for great food into a thriving business by
                 becoming part of the Chaat Bar family. Whether you want to offer
-                the best Amritsari kulcha or authentic samosa chaat in
-                Chestermere, we’ll allow you to bring a taste of Indian streets
-                to your local streets!
+                the best Mix Fruit Shake or authentic Desserts in Chestermere,
+                we’ll allow you to bring a taste of Indian streets to your local
+                streets!
               </p>
             </div>
           </Container>
@@ -305,7 +305,7 @@ const Franchise = () => {
 
       <Footer
         title="Contact Best Fast Food Restaurant"
-        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Amritsari kulcha and samosa chaat restaurant!"
+        description="Ready to bring the Chaat Bar experience to your community in or around Chestermere? Get in touch today and let's explore the possibilities of you being a part of the ever-expanding Chaat Bar Franchise Family - the best Mix Fruit Shake or authentic Desserts restaurant!"
       />
     </PageLayout>
   );

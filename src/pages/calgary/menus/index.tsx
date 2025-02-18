@@ -85,12 +85,11 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Fast Food Menu NE Calgary | Amritsari Kulcha | Samosa Chaat
-          Alberta
+          Best Fast Food Menu NE Calgary | Burger | Falooda | Shakes
         </title>
         <meta
           name="description"
-          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic samosa chaat in NE Calgary! A journey of vibrant Indian flavors awaits at the best fast food restaurant in NE Calgary."
+          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic Lazeez drinks in NE Calgary! A journey of vibrant Indian flavors awaits at the best fast food restaurant in NE Calgary."
         />
       </Head>
 
@@ -113,10 +112,10 @@ export default function Menus() {
                   <p>
                     Do you know what makes Chaat Bar the best fast-food
                     restaurant in NE Calgary? It’s our menu! Featuring
-                    everything from authentic samosa chaat to the finest
-                    Amritsari kulcha in Calgary, it will take you on a
-                    mouthwatering journey through Canada’s culinary scene. Our
-                    menu also features regional specialties you’re sure to love.
+                    everything from authentic Prantha to the finest Platters in
+                    Calgary, it will take you on a mouthwatering journey through
+                    Canada’s culinary scene. Our menu also features regional
+                    specialties you’re sure to love.
                   </p>
                 </div>
               </Col>
@@ -262,7 +261,7 @@ export default function Menus() {
       </main>
       <Footer
         title="Contact Details of Best Fast Food Restaurant NE Calgary"
-        description="Eager to bring the Chaat Bar experience to your community in or around NE Calgary? Get in touch today and let's explore how you can join the ever-expanding Chaat Bar Franchise Family - home of the best Amritsari kulcha and samosa chaat!"
+        description="Eager to bring the Chaat Bar experience to your community in or around NE Calgary? Get in touch today and let's explore how you can join the ever-expanding Chaat Bar Franchise Family - home of the best Panner Tikka and Desserts!"
       />
     </PageLayout>
   );
