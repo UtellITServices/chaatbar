@@ -7,17 +7,27 @@ import BulkUploadForm from "@/pageComponent/admin/category/bulkModal";
 import AddEditCategoryForm from "@/pageComponent/admin/category/categoryModal";
 import { useStore } from "@/store";
 import clsx from "clsx";
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  where,
+} from "firebase/firestore";
 import { useState } from "react";
 import { Table } from "react-bootstrap";
 import { FaCloudUploadAlt } from "react-icons/fa";
-import { MdModeEditOutline } from "react-icons/md";
+import { MdModeEditOutline, MdOutlineFastfood } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "sonner";
 import styles from "./admin.module.scss";
+import { useRouter } from "next/router";
 
 export default function Category() {
+  const router = useRouter();
   const { menuCategories, setMenuCategories, categoryLoader } = useStore(
     (state: any) => state
   );
@@ -33,10 +43,15 @@ export default function Category() {
     setLoading(true);
     try {
       const querySnapshot = await getDocs(collectionRef);
-      const data = querySnapshot.docs.map((doc) => ({
+      const data: any = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
+      data.sort((a, b) => {
+        const orderA = a.order_id ?? Number.MAX_SAFE_INTEGER; // If undefined, move to end
+        const orderB = b.order_id ?? Number.MAX_SAFE_INTEGER;
+        return orderA - orderB;
+      });
       setMenuCategories(data ?? []);
     } catch (err: any) {
       console.log("err==>", err);
@@ -107,6 +122,15 @@ export default function Category() {
                     </td>
                     <td className={styles.contain_width}>
                       <div className="action_btn">
+                        <span
+                          title="Menus"
+                          className="edit"
+                          onClick={() =>
+                            router.push(`/admin/${item?.id}/products`)
+                          }
+                        >
+                          <MdOutlineFastfood />
+                        </span>
                         <span
                           title="Upload"
                           className="view"

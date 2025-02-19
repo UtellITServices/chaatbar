@@ -8,7 +8,7 @@ import Preloader from "@/components/loader";
 import { Toaster } from "sonner";
 import { useStore } from "@/store";
 import { useRouter } from "next/router";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { auth, db } from "@/firebase.config";
 import { onAuthStateChanged } from "firebase/auth";
 import { clearToken, storeToken } from "../utils/functions";
@@ -29,10 +29,15 @@ export default function App({ Component, pageProps }: AppProps) {
     const collectionRef = collection(db, "category");
     try {
       const querySnapshot = await getDocs(collectionRef);
-      const data = querySnapshot.docs.map((doc) => ({
+      const data: any = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
+      data.sort((a, b) => {
+        const orderA = a.order_id ?? Number.MAX_SAFE_INTEGER; // If undefined, move to end
+        const orderB = b.order_id ?? Number.MAX_SAFE_INTEGER;
+        return orderA - orderB;
+      });
       setMenuCategories(data ?? []);
     } catch (err: any) {
       console.log("err==>", err);

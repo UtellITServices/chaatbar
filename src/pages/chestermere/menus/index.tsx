@@ -55,21 +55,29 @@ export default function Menus() {
         getDocs(categoryCollectionRef),
         getDocs(menuCollectionRef),
       ]);
-      const categories = categoriesSnapshot.docs.map((doc) => ({
+      const categories: any = categoriesSnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      const menus = menusSnapshot.docs.map((doc) => ({
+      categories.sort((a, b) => {
+        const orderA = a.order_id ?? Number.MAX_SAFE_INTEGER; // If undefined, move to end
+        const orderB = b.order_id ?? Number.MAX_SAFE_INTEGER;
+        return orderA - orderB;
+      });
+      const menus: any = menusSnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
+      menus.sort((a, b) => {
+        const orderA = a.order_id ?? Number.MAX_SAFE_INTEGER; // If undefined, move to end
+        const orderB = b.order_id ?? Number.MAX_SAFE_INTEGER;
+        return orderA - orderB;
+      });
       const result = categories.map((category: any) => ({
         ...category,
-        menus: menus
-          .filter((menu: any) => menu.category_id === category.id)
-          .reverse(),
+        menus: menus.filter((menu: any) => menu.category_id === category.id),
       }));
-      setMenuList(result.reverse());
+      setMenuList(result);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {

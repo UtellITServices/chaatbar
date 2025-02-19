@@ -1,16 +1,15 @@
 import CustomButton from "@/components/elements/button";
 import InputField from "@/components/elements/input";
-import SelectField from "@/components/elements/select_input";
 import { db } from "@/firebase.config";
-import { useStore } from "@/store";
+import { addMenuYupSchema } from "@/validationSchema/admin";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { useFormik } from "formik";
 import _, { isArray } from "lodash";
-import { FC, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { FC, useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { toast } from "sonner";
 import styles from "./menu.module.scss";
-import { addMenuYupSchema } from "@/validationSchema/admin";
 
 interface IProps {
   handleCloseModal: () => void;
@@ -19,18 +18,20 @@ interface IProps {
 }
 
 const AddEditMenu: FC<IProps> = ({ handleCloseModal, data, updateList }) => {
+  const router = useRouter();
+
   const editMode = !!data;
   const [loading, setLoading] = useState(false);
   const [initialValues, setInitialValues] = useState({
-    category_id: data?.category_id ?? "",
+    category_id: router.query?.id ?? "",
     title: data?.title ?? "",
     description: data?.description ?? "",
+    order_id: data?.order_id ?? "",
     price: data?.price ?? "",
     sub_menu: data?.sub_menu ?? [],
   });
 
   const emptySubmenu = { title: "", description: "", price: "" };
-  const { menuCategories } = useStore((state: any) => state);
 
   const formik = useFormik({
     initialValues: {
@@ -47,14 +48,6 @@ const AddEditMenu: FC<IProps> = ({ handleCloseModal, data, updateList }) => {
       }
     },
   });
-
-  const categoryOptions = [
-    { value: "", label: "--- select category ---" },
-    ...menuCategories?.map((item) => ({
-      label: item?.title,
-      value: item?.id,
-    })),
-  ];
 
   const handleAdd = async (values) => {
     setLoading(true);
@@ -114,9 +107,6 @@ const AddEditMenu: FC<IProps> = ({ handleCloseModal, data, updateList }) => {
     }
     setInitialValues(dataCopy);
   };
-  useEffect(() => {
-    console.log("formik.values", formik.values);
-  }, [formik.values]);
   return (
     <div className={styles.addModal}>
       <form onSubmit={formik.handleSubmit}>
@@ -135,17 +125,18 @@ const AddEditMenu: FC<IProps> = ({ handleCloseModal, data, updateList }) => {
             name="description"
             placeholder="Enter Description"
           />
-          <SelectField
-            label="Select category"
-            formik={formik}
-            name="category_id"
-            optionList={categoryOptions}
-          />
           <InputField
             formik={formik}
             label="Price"
             name="price"
             placeholder="Enter Price"
+            className={styles.width50}
+          />
+          <InputField
+            formik={formik}
+            label="Order ID"
+            name="order_id"
+            placeholder="Enter Order ID"
             className={styles.width50}
           />
           <div>

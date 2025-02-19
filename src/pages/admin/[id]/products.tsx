@@ -3,22 +3,33 @@ import PopupLayout from "@/components/elements/popup";
 import { db } from "@/firebase.config";
 import AdminLayout from "@/layout/adminDashboard";
 import AddEditMenu from "@/pageComponent/admin/menu/addEditMenu";
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { MdModeEditOutline } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "sonner";
-import styles from "./admin.module.scss";
+import styles from "../admin.module.scss";
 
-const Menus = () => {
+const Products = () => {
+  const router = useRouter();
   const [addModal, setAddModal] = useState(false);
   const [deleteModal, setDeleteModal] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loadingDelete, setLoadingDelete] = useState(false);
   const [editModal, setEditModal] = useState(null);
 
+  const [categoryDetail, setCategoryDetail] = useState(null);
   const [menuList, setMenuList] = useState([]);
 
   const handleDelete = async () => {
@@ -36,20 +47,55 @@ const Menus = () => {
     setLoadingDelete(false);
   };
 
-  const collectionRef = collection(db, "menus");
+  console.log("router.query", router.query?.id);
+
   const getData = async () => {
+    const collectionRef = collection(db, "menus");
+
+    const q = query(
+      collectionRef,
+      where("category_id", "==", router.query?.id)
+    );
     try {
-      const querySnapshot = await getDocs(collectionRef);
-      const data = querySnapshot.docs.map((doc) => ({
+      const querySnapshot = await getDocs(q);
+      const data: any = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
+      data.sort((a, b) => {
+        const orderA = a.order_id ?? Number.MAX_SAFE_INTEGER; // If undefined, move to end
+        const orderB = b.order_id ?? Number.MAX_SAFE_INTEGER;
+        return orderA - orderB;
+      });
       setMenuList(data ?? []);
     } catch (err: any) {
       console.log("err==>", err);
     }
     setLoading(false);
   };
+  const getCategoryDoc = async () => {
+    const docRef = doc(db, "category", router.query?.id as string);
+    try {
+      const docSnap = await getDoc(docRef);
+      // const data = querySnapshot.docs.map((doc) => ({
+      //   id: doc.id,
+      //   ...doc.data(),
+      // }));
+      // setMenuList(data ?? []);
+      console.log("docSnap", docSnap);
+
+      setCategoryDetail({ id: docSnap.id, ...docSnap.data() });
+      // if (docSnap.exists()) {
+      // } else {
+      //   console.log("No such document!");
+      //   return null;
+      // }
+    } catch (err: any) {
+      console.log("err==>", err);
+    }
+    setLoading(false);
+  };
+  console.log("categoryDetail", categoryDetail);
 
   const handleCloseModal = () => {
     setAddModal(false);
@@ -58,13 +104,22 @@ const Menus = () => {
   };
 
   useEffect(() => {
-    getData();
-  }, []);
+    if (router.query?.id) {
+      getData();
+      getCategoryDoc();
+    }
+  }, [router.query]);
 
   return (
     <AdminLayout>
+      {/* <CustomButton variant="danger" size="sm">
+        <span style={{ display: "flex", alignItems: "center", gap: 3 }}>
+          <IoArrowBack />
+          Back
+        </span>
+      </CustomButton> */}
       <div className={styles.heading}>
-        <h4>MenusList</h4>
+        <h4>MenusList of ({categoryDetail?.title})</h4>
         <CustomButton onClick={() => setAddModal(true)}>+ Menu</CustomButton>
         {/* <CustomButton onClick={addDataToFirestore}>+ Menu</CustomButton> */}
       </div>
@@ -175,4 +230,4 @@ const Menus = () => {
   );
 };
 
-export default Menus;
+export default Products;

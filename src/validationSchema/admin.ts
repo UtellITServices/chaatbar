@@ -16,7 +16,7 @@ export const loginYupSchema = yup.object().shape({
 });
 
 export const addMenuYupSchema = yup.object().shape({
-  category_id: yup.string().required("category id is required"),
+  // category_id: yup.string().required("category id is required"),
   title: yup
     .string()
     .trim()
@@ -25,7 +25,6 @@ export const addMenuYupSchema = yup.object().shape({
   description: yup
     .string()
     .trim()
-    .min(10, "Minimum 10 characters")
     .max(500, "Maximum 5000 characters")
     .required("Description is required"),
   // image: yup.mixed(),

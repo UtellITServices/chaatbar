@@ -18,11 +18,6 @@ const Sidebar = () => {
       icon: <RxDashboard />,
       link: "/admin",
     },
-    {
-      name: "Menus",
-      icon: <RxDashboard />,
-      link: "/admin/menus",
-    },
   ];
 
   const handleLogout = async () => {

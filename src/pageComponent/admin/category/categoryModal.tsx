@@ -21,6 +21,7 @@ const AddEditCategoryForm: FC<IProps> = ({ handleClose, data, updateList }) => {
     initialValues: {
       title: data?.title ?? "",
       description: data?.description ?? "",
+      order_id: data?.order_id ?? "",
       image: data?.image ?? "",
     },
     onSubmit: (values) => {
@@ -79,6 +80,13 @@ const AddEditCategoryForm: FC<IProps> = ({ handleClose, data, updateList }) => {
             name="description"
             label="Description"
             placeholder="Write description"
+          />
+          <InputField
+            isNumber
+            formik={formik}
+            name="order_id"
+            label="Order number"
+            placeholder="Add order number"
           />
         </div>
         <div className={styles.button_wrap}>
