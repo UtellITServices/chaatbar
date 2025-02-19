@@ -7,15 +7,8 @@ import BulkUploadForm from "@/pageComponent/admin/category/bulkModal";
 import AddEditCategoryForm from "@/pageComponent/admin/category/categoryModal";
 import { useStore } from "@/store";
 import clsx from "clsx";
-import {
-  collection,
-  deleteDoc,
-  doc,
-  getDocs,
-  orderBy,
-  query,
-  where,
-} from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { Table } from "react-bootstrap";
 import { FaCloudUploadAlt } from "react-icons/fa";
@@ -24,7 +17,6 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { RotatingLines } from "react-loader-spinner";
 import { toast } from "sonner";
 import styles from "./admin.module.scss";
-import { useRouter } from "next/router";
 
 export default function Category() {
   const router = useRouter();

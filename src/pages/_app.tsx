@@ -1,16 +1,16 @@
-import "@/styles/globals.scss";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import type { AppProps } from "next/app";
-import { useEffect, useState } from "react";
 import Preloader from "@/components/loader";
-import { Toaster } from "sonner";
-import { useStore } from "@/store";
-import { useRouter } from "next/router";
-import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { auth, db } from "@/firebase.config";
+import { useStore } from "@/store";
+import "@/styles/globals.scss";
 import { onAuthStateChanged } from "firebase/auth";
+import { collection, getDocs } from "firebase/firestore";
+import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { Toaster } from "sonner";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { clearToken, storeToken } from "../utils/functions";
 
 export default function App({ Component, pageProps }: AppProps) {
