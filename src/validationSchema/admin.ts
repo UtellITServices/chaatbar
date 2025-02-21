@@ -20,7 +20,7 @@ export const addMenuYupSchema = yup.object().shape({
   title: yup
     .string()
     .trim()
-    .max(30, "Maximum 30 characters")
+    .max(50, "Maximum 50 characters")
     .required("Title is required"),
   description: yup
     .string()
