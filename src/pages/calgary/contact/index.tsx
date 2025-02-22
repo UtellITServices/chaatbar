@@ -7,8 +7,8 @@ import { useFormik } from "formik";
 import Head from "next/head";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { FaRegHandshake } from "react-icons/fa";
-import { MdOutlineBusinessCenter, MdSupportAgent } from "react-icons/md";
+// import { FaRegHandshake } from "react-icons/fa";
+// import { MdOutlineBusinessCenter, MdSupportAgent } from "react-icons/md";
 import { toast } from "sonner";
 import styles from "./Contact.module.scss";
 
