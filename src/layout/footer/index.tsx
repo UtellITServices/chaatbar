@@ -78,7 +78,6 @@ function Footer({ title, description }: IProps) {
                   {is_calgary ? (
                     <>
                       <a href="tel:+1 4034600405">+1 (403)-460-0405</a>
-                      <a href="tel:+1 4034788324">+1 (403)-478-8324</a>
                     </>
                   ) : (
                     <a href="tel:+1 8255401590">+1 825-540-1590</a>
@@ -98,7 +97,6 @@ function Footer({ title, description }: IProps) {
                       <a href="mailto:thechaatbarcalgary@gmail.com">
                         thechaatbarcalgary@gmail.com
                       </a>
-                      <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
                     </>
                   ) : (
                     <a href="mailto:info@chaatbar.ca">info@chaatbar.ca</a>
@@ -125,17 +123,17 @@ function Footer({ title, description }: IProps) {
             <div className={styles.socialLinks}>
               <ul>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a href="https://www.facebook.com/thechaatbarcalgary/">
                     <NextImage src="/images/social/facebook.svg" alt="" />
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a href="https://www.instagram.com/thechaatbarcalgary/">
                     <NextImage src="/images/social/instagram.svg" alt="" />
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">
+                  <a href="https://www.tiktok.com/discover/chat-bar-in-calgary">
                     <NextImage src="/images/social/tik-tok.svg" alt="" />
                   </a>
                 </li>
@@ -146,7 +144,7 @@ function Footer({ title, description }: IProps) {
         <div className={styles.copyright}>
           <Container>
             <p>
-              © Copyright 2023 The Chaat Bar Design & Developed by:{" "}
+              © Copyright 2025 The Chaat Bar Design & Developed by:{" "}
               <a href="https://utellitservices.com/" target="_blank">
                 {" "}
                 Utell It Services.

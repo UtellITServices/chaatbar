@@ -114,27 +114,18 @@ export default function Contact() {
               <div className={styles.social}>
                 <h5>Follow us on</h5>
                 <div className={styles.img_social}>
-                  <a href="#">
+                  <a href="https://www.facebook.com/thechaatbarcalgary/">
                     <NextImage
                       src="https://iqbal-sweets.vercel.app/images/facebook.png"
                       alt={""}
                     />
                   </a>
-                  <a href="#">
-                    <NextImage
-                      src="https://iqbal-sweets.vercel.app/images/twitter.png"
-                      alt={""}
-                    />
+                  <a href="https://www.tiktok.com/discover/chat-bar-in-calgary">
+                    <NextImage src="/images/tiktok.png" alt={""} />
                   </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/thechaatbarcalgary/">
                     <NextImage
                       src="https://iqbal-sweets.vercel.app/images/instagram.png"
-                      alt={""}
-                    />
-                  </a>
-                  <a href="#">
-                    <NextImage
-                      src="https://iqbal-sweets.vercel.app/images/linkin.png"
                       alt={""}
                     />
                   </a>
@@ -196,7 +187,7 @@ export default function Contact() {
           </div>
         </Container>
       </section>
-      <section
+      {/* <section
         className={styles.support}
         style={{ backgroundImage: "url('/images/contact/support.jpeg')" }}
       >
@@ -225,7 +216,7 @@ export default function Contact() {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
       {/* <section className={styles.Join}>
         <Container>
           <h5>Join US</h5>

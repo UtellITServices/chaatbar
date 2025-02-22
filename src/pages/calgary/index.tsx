@@ -194,10 +194,7 @@ export default function Home() {
                 <SwiperSlide>
                   <div className={styles.slideWrapper}>
                     <div className={styles.image}>
-                      <NextImage
-                        src={"/images/Untitled-design-8.jpg"}
-                        alt={""}
-                      />
+                      <NextImage src={"/images/chaat5.png"} alt={""} />
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
@@ -222,7 +219,7 @@ export default function Home() {
                 <SwiperSlide>
                   <div className={styles.slideWrapper}>
                     <div className={styles.image}>
-                      <NextImage src={"/images/GOBI-MANCHURIAN.jpg"} alt={""} />
+                      <NextImage src={"/images/chaat6.png"} alt={""} />
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
@@ -249,10 +246,7 @@ export default function Home() {
                 <SwiperSlide>
                   <div className={styles.slideWrapper}>
                     <div className={styles.image}>
-                      <NextImage
-                        src={"/images/food-sold-streets.jpg"}
-                        alt={""}
-                      />
+                      <NextImage src={"/images/chaat7.png"} alt={""} />
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
@@ -292,12 +286,12 @@ export default function Home() {
             />
             <NextImage
               className={styles.imageThree}
-              src="/images/image-2.png"
+              src="/images/image-3.png"
               alt=""
             />
             <NextImage
               className={styles.imageFour}
-              src="/images/image-1.png"
+              src="/images/image-4.png"
               alt=""
             />
             {/* <NextImage

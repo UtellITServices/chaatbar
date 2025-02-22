@@ -104,7 +104,7 @@ export default function Menus() {
       <main className={styles.main}>
         <section
           className={styles.banner}
-          style={{ backgroundImage: "url(/images/menus/banner2.png)" }}
+          style={{ backgroundImage: "url(/images/menus/banner2.jpg)" }}
         >
           <Container>
             <Row className={styles.row}>
@@ -264,7 +264,7 @@ export default function Menus() {
         </section>
         <section
           className={styles.bg_footer}
-          style={{ backgroundImage: "url(/images/menus/banner2.png)" }}
+          style={{ backgroundImage: "url(/images/menus/banner2.jpg)" }}
         ></section>
       </main>
       <Footer

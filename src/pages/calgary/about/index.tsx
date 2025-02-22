@@ -69,12 +69,12 @@ export default function About() {
             <Col xl={6}>
               <div className={styles.abRight}>
                 <NextImage
-                  src="/images/about/about5.avif"
+                  src="/images/chaat4.png"
                   className={styles.abRL}
                   alt=""
                 />
                 <NextImage
-                  src="/images/about/about6.avif"
+                  src="/images/chaat3.png"
                   className={styles.abRR}
                   alt=""
                 />
