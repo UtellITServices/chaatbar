@@ -264,7 +264,7 @@ export default function Menus() {
         </section>
         <section
           className={styles.bg_footer}
-          style={{ backgroundImage: "url(/images/menus/banner2.jpg)" }}
+          style={{ backgroundImage: "url(/images/menus/banner2.JPG)" }}
         ></section>
       </main>
       <Footer
