@@ -104,7 +104,7 @@ export default function Menus() {
       <main className={styles.main}>
         <section
           className={styles.banner}
-          style={{ backgroundImage: "url(/images/menus/banner2.jpg)" }}
+          style={{ backgroundImage: "url(/images/menus/banner2.JPG)" }}
         >
           <Container>
             <Row className={styles.row}>
