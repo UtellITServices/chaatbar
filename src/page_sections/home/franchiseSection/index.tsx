@@ -7,7 +7,7 @@ interface IProps {
   bgImagePath?: string;
 }
 const FranchiseSection: FC<IProps> = ({
-  bgImagePath = "/images/menus/banner2.jpg",
+  bgImagePath = "/images/menus/banner2.JPG",
 }) => {
   return (
     <section
