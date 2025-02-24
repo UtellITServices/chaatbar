@@ -455,7 +455,7 @@ export default function Home() {
         </section>
 
         <GetInTouch />
-        <FranchiseSection bgImagePath="/images/menus/banner2.jpg" />
+        <FranchiseSection bgImagePath="/images/menus/banner2.JPG" />
 
         <section className={styles.brand_slider}>
           <Container>
