@@ -134,7 +134,8 @@ export default function About() {
               </div>
             </Col>
             <Col lg={5} className="text-end">
-              <NextImage src="/images/staff/staff2.jpg" alt="" />
+              <NextImage 
+               src="/images/staff/staff2.jpg" alt="" />
             </Col>
           </Row>
           <Row className={styles.row}>

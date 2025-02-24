@@ -116,7 +116,7 @@ export default function Home() {
               modules={[Navigation]}
             >
               <SwiperSlide>
-                <video autoPlay loop muted>
+                <video autoPlay loop muted playsInline webkit-playsinline disablePictureInPicture>
                   <source src="/video/banner_video1.mp4" type="video/mp4" />
                 </video>
               </SwiperSlide>

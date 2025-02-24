@@ -1,72 +1,72 @@
 @import "/src/styles/var";
-
 .franchise_section {
-  padding: 75px 0;
-  position: relative;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  min-height: 550px;
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(#000, 0.5);
-  }
-  .wave {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    &.wave_top {
-      top: 0;
-    }
-    &.wave_bottom {
-      transform: rotate(180deg);
-      bottom: 0;
-    }
-    svg {
-      width: calc(100% + 1.3px);
-      height: 75px;
-    }
-  }
-
-  .content {
-    padding: 5rem 3rem;
+    padding: 75px 0;
     position: relative;
-    z-index: 1;
-    text-align: center;
-    color: #fff;
-    max-width: 800px;
-    margin: auto;
-
-    h3 {
-      font-weight: 800;
-      font-size: var(--heading1);
-      line-height: 1.1;
-      margin-bottom: 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 550px;
+    @supports (-webkit-touch-callout: none) {
+        background-attachment: scroll;
     }
-    p {
-      font-size: var(--f22);
-      opacity: 0.9;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(#000, 0.5);
     }
-    button {
-      font-size: var(--f18);
-      border-radius: 40px;
-      padding: 8px 1.25rem;
-      color: #fff;
+    .wave {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        &.wave_top {
+            top: 0;
+        }
+        &.wave_bottom {
+            transform: rotate(180deg);
+            bottom: 0;
+        }
+        svg {
+            width: calc(100% + 1.3px);
+            height: 75px;
+        }
+    }
+    .content {
+        padding: 5rem 3rem;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        max-width: 800px;
+        margin: auto;
+        h3 {
+            font-weight: 800;
+            font-size: var(--heading1);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: var(--f22);
+            opacity: 0.9;
+        }
+        button {
+            font-size: var(--f18);
+            border-radius: 40px;
+            padding: 8px 1.25rem;
+            color: #fff;
+        }
+        @include max($lg) {
+            padding: 2rem;
+        }
     }
     @include max($lg) {
-      padding: 2rem;
+        min-height: 0;
+        &::before {
+            background-color: rgba(#000, 0.6);
+        }
     }
-  }
-  @include max($lg) {
-    min-height: 0;
-    &::before {
-      background-color: rgba(#000, 0.6);
-    }
-  }
 }

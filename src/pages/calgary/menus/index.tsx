@@ -108,7 +108,7 @@ export default function Menus() {
         >
           <Container>
             <Row className={styles.row}>
-              <Col xl={5} md={6}>
+              <Col xl={8} md={6}>
                 <div className={styles.content_wrapper}>
                   <h2>
                     Chaat Bar&apos;s
