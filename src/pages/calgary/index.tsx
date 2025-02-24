@@ -46,19 +46,19 @@ const brand_slides = [
 ];
 const menu_categories = [
   {
-    title: "Our Culinary Offerings",
+    title: "Raj kachori",
     image: "/images/home/delight1.jpg",
   },
   {
-    title: "Street Food Extravaganza",
+    title: "Veg Sandwich",
     image: "/images/home/delight2.jpg",
   },
   {
-    title: "Flavorful Delights",
+    title: "Gol Gappa",
     image: "/images/home/delight3.jpg",
   },
   {
-    title: "Bursting With Bold Flavors",
+    title: "Maki di roti with saag",
     image: "/images/home/delight4.jpg",
   },
   // {

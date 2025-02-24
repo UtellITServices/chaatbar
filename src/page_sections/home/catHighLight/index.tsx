@@ -66,8 +66,8 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
           <AnimationSection
             image={
               isCalgary
-                ? "/images/home/calgaryFlavour.jpg"
-                : "/images/home/flavours.jpg"
+                ? "/images/food/food2.jpg"
+                : "/images/food/food2.jpg"
             }
           >
             <h2>Garden of Flavors</h2>
@@ -92,7 +92,7 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
             image={
               isCalgary
                 ? "/images/home/sweetsCalgary.jpg"
-                : "/images/home/sweets.jpg"
+                : "/images/food/food3.jpg"
             }
           >
             <div className={styles.content}>
@@ -108,7 +108,7 @@ const CatHighlight: FC<IProps> = ({ isCalgary }) => {
             image={
               isCalgary
                 ? "/images/home/fieryFood.jpg"
-                : "/images/home/hotFood.jpg"
+                : "/images/home/fieryFood.jpg"
             }
           >
             <h2>Bold and Spicy Delights</h2>

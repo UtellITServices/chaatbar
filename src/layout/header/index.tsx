@@ -86,6 +86,9 @@ export default function Header() {
     {
       name: "Franchises",
       link: is_calgary ? "/calgary/franchises" : "/chestermere/franchises",
+    }, {
+      name: "Select store",
+      link: "/",
     },
   ];
 

@@ -46,20 +46,20 @@ const brand_slides = [
 ];
 const menu_categories = [
   {
-    title: "Our Culinary Offerings",
-    image: "/images/Untitled-design-8.jpg",
+    title: "Raj kachori",
+    image: "/images/home/delight1.jpg",
   },
   {
-    title: "Street Food Extravaganza",
-    image: "/images/GOBI-MANCHURIAN.jpg",
+    title: "Veg Sandwich",
+    image: "/images/home/delight2.jpg",
   },
   {
-    title: "Flavorful Delights",
-    image: "/images/food-sold-streets.jpg",
+    title: "Gol Gappa",
+    image: "/images/home/delight3.jpg",
   },
   {
-    title: "Bursting With Bold Flavors",
-    image: "/images/Untitled-design-8.jpg",
+    title: "Maki di roti with saag",
+    image: "/images/home/delight4.jpg",
   },
   // {
   //   title: "A Fusion of Taste and Tradition",
@@ -115,7 +115,7 @@ export default function Home() {
               modules={[Navigation]}
             >
               <SwiperSlide>
-                <video autoPlay loop muted>
+                <video autoPlay loop muted playsInline webkit-playsinline disablePictureInPicture>
                   <source src="/video/chestermereBanner.mp4" type="video/mp4" />
                 </video>
               </SwiperSlide>
@@ -291,7 +291,7 @@ export default function Home() {
                   <div className={styles.slideWrapper}>
                     <div className={styles.image}>
                       <NextImage
-                        src={"/images/Untitled-design-8.jpg"}
+                        src={"/images/chaat6.png"}
                         alt={""}
                       />
                     </div>
@@ -319,7 +319,7 @@ export default function Home() {
                 <SwiperSlide>
                   <div className={styles.slideWrapper}>
                     <div className={styles.image}>
-                      <NextImage src={"/images/GOBI-MANCHURIAN.jpg"} alt={""} />
+                      <NextImage src={"/images/home/delight2.jpg"} alt={""} />
                     </div>
                     <div className={styles.content}>
                       <div className={styles.slideCount}>
@@ -346,7 +346,7 @@ export default function Home() {
                   <div className={styles.slideWrapper}>
                     <div className={styles.image}>
                       <NextImage
-                        src={"/images/food-sold-streets.jpg"}
+                        src={"/images/chaat5.png"}
                         alt={""}
                       />
                     </div>
@@ -455,7 +455,7 @@ export default function Home() {
         </section>
 
         <GetInTouch />
-        <FranchiseSection bgImagePath="/images/home/join.jpg" />
+        <FranchiseSection bgImagePath="/images/menus/banner2.jpg" />
 
         <section className={styles.brand_slider}>
           <Container>

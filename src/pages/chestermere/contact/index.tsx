@@ -114,34 +114,25 @@ export default function Contact() {
           <div className={styles.wrapper}>
             <div className={styles.image_box}>
               <NextImage
-                src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151431701.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                src="/images/contact/contact.jpg"
                 alt={""}
               />
 
               <div className={styles.social}>
                 <h5>Follow us on</h5>
                 <div className={styles.img_social}>
-                  <a href="#">
+                  <a href="https://www.facebook.com/thechaatbarcalgary/">
                     <NextImage
                       src="https://iqbal-sweets.vercel.app/images/facebook.png"
                       alt={""}
                     />
                   </a>
-                  <a href="#">
-                    <NextImage
-                      src="https://iqbal-sweets.vercel.app/images/twitter.png"
-                      alt={""}
-                    />
+                  <a href="https://www.tiktok.com/discover/chat-bar-in-calgary">
+                    <NextImage src="/images/tiktok.png" alt={""} />
                   </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/thechaatbarcalgary/">
                     <NextImage
                       src="https://iqbal-sweets.vercel.app/images/instagram.png"
-                      alt={""}
-                    />
-                  </a>
-                  <a href="#">
-                    <NextImage
-                      src="https://iqbal-sweets.vercel.app/images/linkin.png"
                       alt={""}
                     />
                   </a>

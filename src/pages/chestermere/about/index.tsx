@@ -70,12 +70,12 @@ export default function About() {
             <Col xl={6}>
               <div className={styles.abRight}>
                 <NextImage
-                  src="https://img.freepik.com/premium-photo/thanksgiving-decorations_1278144-17623.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                  src="/images/about/about2.jpg"
                   className={styles.abRL}
                   alt=""
                 />
                 <NextImage
-                  src="https://img.freepik.com/premium-photo/closeup-mutton-chicken-tikka-skewers-white-plate_487509-937.jpg?uid=R115693902&ga=GA1.1.61680293.1721194367&semt=ais_hybrid"
+                  src="/images/about/about3.jpg"
                   className={styles.abRR}
                   alt=""
                 />
