@@ -25,16 +25,16 @@ const Page = () => {
   const handleDeleteAccount = async (values) => {
     try {
       setButtonLoader(true);
-      const response = await fetch("http://66.179.210.141:3000/api/v1/app/customers/verify_and_destroy", {
+      const response = await fetch("/api/proxy", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         toast.success("Account deleted successfully!");
         setAccountDeleted(true);
