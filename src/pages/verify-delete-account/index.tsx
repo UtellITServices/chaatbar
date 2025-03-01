@@ -9,6 +9,7 @@ import { deleteAccountSchema } from "@/validationSchema/customer";
 
 const Page = () => {
   const [buttonLoader, setButtonLoader] = useState(false);
+  const [accountDeleted, setAccountDeleted] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -36,6 +37,7 @@ const Page = () => {
 
       if (response.ok) {
         toast.success("Account deleted successfully!");
+        setAccountDeleted(true);
       } else {
         toast.error(data.message || "Failed to delete account.");
       }
@@ -49,18 +51,25 @@ const Page = () => {
 
   return (
     <AuthLayout title="Delete Account">
-      <form onSubmit={formik.handleSubmit} className={styles.field_wrapper}>
-        <InputField formik={formik} name="email" placeholder="Email address" />
-        <InputField
-          type="password"
-          formik={formik}
-          name="password"
-          placeholder="Password"
-        />
-        <CustomButton className="mt-2" type="submit" loading={buttonLoader}>
-          Delete Account
-        </CustomButton>
-      </form>
+      {accountDeleted ? (
+        <div className={styles.thank_you_card}>
+         
+          <p>Your account has been deleted successfully.</p>
+        </div>
+      ) : (
+        <form onSubmit={formik.handleSubmit} className={styles.field_wrapper}>
+          <InputField formik={formik} name="email" placeholder="Email address" />
+          <InputField
+            type="password"
+            formik={formik}
+            name="password"
+            placeholder="Password"
+          />
+          <CustomButton className="mt-2" type="submit" loading={buttonLoader}>
+            Delete Account
+          </CustomButton>
+        </form>
+      )}
     </AuthLayout>
   );
 };
