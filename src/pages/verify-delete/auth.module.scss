@@ -1,0 +1,29 @@
+@import "/src/styles/var";
+
+.checkbox_wrap {
+  display: flex;
+  align-items: center;
+  label {
+    padding-left: 10px;
+    color: var(--textColor);
+  }
+}
+.field_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.25rem;
+}
+.popup_wrapper {
+  text-align: center;
+  padding: 1rem;
+  h4 {
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+  }
+}
+.popup_field {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
