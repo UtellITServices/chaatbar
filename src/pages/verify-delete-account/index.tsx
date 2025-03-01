@@ -25,7 +25,7 @@ const Page = () => {
   const handleDeleteAccount = async (values) => {
     try {
       setButtonLoader(true);
-      const response = await fetch("/api/proxy", {
+      const response = await fetch("/api/delete_account", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
