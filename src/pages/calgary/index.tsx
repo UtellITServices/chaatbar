@@ -17,7 +17,6 @@ import { TfiQuoteLeft, TfiQuoteRight } from "react-icons/tfi";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./Home.module.scss";
-
 const brand_slides = [
   {
     image: "/images/brands/image1.png",

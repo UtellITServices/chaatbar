@@ -82,12 +82,11 @@ export default function Contact() {
     <PageLayout>
       <Head>
         <title>
-          Contact Best Paneer Kulcha Restaurant Chestermere | Chaat and Fast
-          Food Point
+        Contact Best Amritsari Kulcha Restaurant Chestermere | Samosa Chaat Fast Food Point
         </title>
         <meta
           name="description"
-          content="Contact Chaat Bar - best fast food restaurant where guests can enjoy traditional Indian flavors! Give feedback on best Panner kulcha and Burgers in Chestermere, Alberta. "
+          content="Contact Chaat Bar - best fast food restaurant where guests can enjoy traditional Indian flavors! Give feedback on best Amritsari kulcha and samosa chaat in Chestermere, Alberta."
         />
       </Head>
 

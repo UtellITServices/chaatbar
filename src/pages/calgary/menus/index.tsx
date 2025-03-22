@@ -93,11 +93,11 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Fast Food Menu NE Calgary | Burger | Falooda | Shakes
+        Best Fast Food Menu NE Calgary | Amritsari Kulcha | Samosa Chaat Alberta
         </title>
         <meta
           name="description"
-          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic Lazeez drinks in NE Calgary! A journey of vibrant Indian flavors awaits at the best fast food restaurant in NE Calgary."
+          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic samosa chaat in NE Calgary! A journey of vibrant Indian flavors awaits at the best fast food restaurant in NE Calgary."
         />
       </Head>
 

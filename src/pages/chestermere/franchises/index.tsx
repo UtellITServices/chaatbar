@@ -107,12 +107,11 @@ const Franchise = () => {
     <PageLayout>
       <Head>
         <title>
-          Buy Best Fast Food Franchise | Aloo Gobi Parontha and Tikka Point
-          Chestermere
+        Buy Best Fast Food Franchise | Amritsari Kulcha and Samosa Chaat Point Chestermere
         </title>
         <meta
           name="description"
-          content="Everything about buying the best fast food restaurant franchise in Chestermere! Learn intricate details about owning best Aloo Gobi Parontha and Tikka in Chestermere.  "
+          content="Everything about buying the best fast food restaurant franchise in Chestermere! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Chestermere."
         />
       </Head>
 

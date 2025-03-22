@@ -12,12 +12,11 @@ export default function About() {
     <PageLayout>
       <Head>
         <title>
-          About Best Saag Makki di Rotti Restaurant | Fast Food Point | Desi
-          Ghee di Choori Chestermere
+        About Best Samosa Chaat Restaurant | Fast Food Point | Amritsari Kulcha Chestermere
         </title>
         <meta
           name="description"
-          content="Learn about Chaat Bar featuring the best Saag Makki di Rotti and authentic Desi Ghee di Choori in Chestermere! Everything about the best fast-food restaurant in Chestermere."
+          content="Learn about Chaat Bar featuring the best Amritsari Kulcha and authentic samosa chaat in Chestermere! Everything about the best fast-food restaurant in Chestermere."
         />
       </Head>
 

@@ -107,11 +107,11 @@ const Franchise = () => {
     <PageLayout>
       <Head>
         <title>
-          Buy Best Fast Food Franchise Calgary | Panner Tikka and Falooda Point
+        Buy Best Fast Food Franchise Calgary | Amritsari Kulcha and Samosa Chaat Point
         </title>
         <meta
           name="description"
-          content="Everything about buying the best fast food restaurant franchise in NE Calgary! Learn intricate details about owning best Panner Tikka and Falooda branch in Calgary."
+          content="Everything about buying the best fast food restaurant franchise in NE Calgary! Learn intricate details about owning best Amritsari Kulcha and Samosa chaat branch in Calgary."
         />
       </Head>
 

@@ -93,11 +93,11 @@ export default function Menus() {
     <PageLayout>
       <Head>
         <title>
-          Best Fast Food Menu Canada | Platters | kulcha | Tikka in Chestermere
+        Best Fast Food Menu Canada | Amritsari Kulcha and Samosa Chaat Chestermere
         </title>
         <meta
           name="description"
-          content="Explore Chaat Bar's menu featuring the best Platters and authentic Tikka's in Chestermere! A journey of vibrant Indian flavors awaits at the best fast food restaurant in Chestermere, CA."
+          content="Explore Chaat Bar's menu featuring the best Amritsari Kulcha and authentic samosa chaat in Chestermere! A journey of vibrant Indian flavors awaits at the best fast food restaurant in Chestermere, CA."
         />
       </Head>
 

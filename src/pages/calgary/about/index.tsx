@@ -12,11 +12,11 @@ export default function About() {
     <PageLayout>
       <Head>
         <title>
-          About Best Prantha Restaurant | Fast Food Calgary | Top Desserts
+        About Best Samosa Chaat Restaurant | Fast Food Calgary | Top Amritsari Kulcha
         </title>
         <meta
           name="description"
-          content="Learn about Chaat Bar featuring the best Prantha and authentic Desserts in NE Calgary! Everything about the best fast-food restaurant in NE Calgary!"
+          content="Learn about Chaat Bar featuring the best Amritsari Kulcha and authentic samosa chaat in NE Calgary! Everything about the best fast-food restaurant in NE Calgary!"
         />
       </Head>
 

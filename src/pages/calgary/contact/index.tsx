@@ -82,11 +82,11 @@ export default function Contact() {
     <PageLayout>
       <Head>
         <title>
-          Contact Best Platters Restaurant NE Calgary | Shakes Point
+        Contact Best Amritsari Kulcha Restaurant NE Calgary | Samosa Chaat Fast Food Point
         </title>
         <meta
           name="description"
-          content="Contact Chaat Bar - best fast food restaurant in NE Calgary where guests can enjoy traditional Indian flavors! Give feedback on best Platters and Shakes in Northeast Calgary, Alberta. "
+          content="Contact Chaat Bar - best fast food restaurant in NE Calgary where guests can enjoy traditional Indian flavors! Give feedback on best Amritsari kulcha and samosa chaat in Northeast Calgary, Alberta."
         />
       </Head>
 
