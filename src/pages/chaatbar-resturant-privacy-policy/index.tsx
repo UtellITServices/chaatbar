@@ -1,9 +1,9 @@
 import Head from "next/head";
 import PageLayout from "@/layout/pageLayout";
 import { Footer } from "@/layout/footer";
-import { Container, Row, Col } from "react-bootstrap";
+// import { Container, Row, Col } from "react-bootstrap";
 import styles from "./PrivacyPolicy.module.scss";
-import clsx from "clsx";
+// import clsx from "clsx";
 
 export default function PrivacyPolicy() {
   return (
